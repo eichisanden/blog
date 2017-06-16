@@ -1,0 +1,21 @@
+baseURL = "http://gyoza.beer/"
+languageCode = "ja"
+title = "A1 Blog"
+theme = "hugo_theme_robust"
+preserveTaxonomyNames = true
+paginate = 3
+googleAnalytics = "UA-99604336-1"
+disqusShortname="a1-blog"
+hasCJKLanguage = true
+# Build robots.txt file
+enableRobotsTXT = true
+
+[params]
+  dateformat = "Jan 2, 2006" # Optional
+  # Fonts settings.
+    googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
+  fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
+  #logofontfamily = "Lobster, cursive" # Optional, Override logo font.
+
+[outputs]
+page = [ "HTML", "AMP" ]
