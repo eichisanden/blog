@@ -1,4 +1,4 @@
-baseURL = "http://gyoza.beer/"
+baseURL = "https://gyoza.beer/"
 languageCode = "ja"
 title = "A1 Blog"
 theme = "hugo_theme_robust"
