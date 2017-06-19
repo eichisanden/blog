@@ -2,7 +2,7 @@
 date = "2017-05-14T12:56:15+09:00"
 draft = false
 title = "Github Pages/Hugoでブログを作成してみた"
-categories = ["Memo"]
+categories = ["技術メモ"]
 tags = ["Hugo", "Github", "Github Pages"]
 thumbnail = "images/hugo.png"
 toc = true

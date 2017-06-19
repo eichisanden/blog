@@ -1,8 +1,8 @@
 +++
-categories = ["Memo"]
+categories = ["技術メモ"]
 date = "2017-05-14T23:40:05+09:00"
 draft = false
-tags = ["Github", "Github Pages", "DNS"]
+tags = ["Github", "Github Pages", "独自ドメイン", "DNS"]
 thumbnail = "images/gyoza_beer.jpg"
 title = "Github Pagesを独自ドメインで公開する"
 

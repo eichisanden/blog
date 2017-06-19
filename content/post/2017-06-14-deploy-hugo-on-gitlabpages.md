@@ -1,8 +1,8 @@
 +++
-categories = ["Memo"]
+categories = ["技術メモ"]
 date = "2017-06-14T13:44:07+09:00"
 draft = false
-tags = ["GitLab Pages", "GitHub Pages"]
+tags = ["GitLab", "GitLab Pages", "GitHub", "GitHub Pages", "Let' Encrypt"]
 thumbnail = "images/gitlab_pages2.png"
 title = "GitHub PagesからGitLab Pagesに移行してみた"
 

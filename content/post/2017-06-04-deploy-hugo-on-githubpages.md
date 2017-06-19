@@ -1,5 +1,5 @@
 +++
-categories = ["Memo"]
+categories = ["技術メモ"]
 date = "2017-06-04T10:18:59+09:00"
 draft = false
 tags = ["Github", "Github Pages", "Travis.ci"]
