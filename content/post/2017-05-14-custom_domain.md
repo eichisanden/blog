@@ -32,7 +32,7 @@ https://help.github.com/articles/setting-up-a-custom-subdomain/
 Github Pagesで公開しているリポジトリのSettingsからCustom Domainに `blog.gyoza.beer` を設定します。  
 自分の場合は `ユーザ名.github.io` リポジトリに設定します。
 
-{{% img src="images/github_setting_custom_domain.png" %}}
+{{% img src="images/github_setting_custom_domain.png" w="260" h="209" %}}
 
 ネットで色々調べてると、CNAMEファイルを手動で追加する手順が出てきますが、Helpによるとこの設定をした時点で自動的にCNAMEファイルが生成されるようでした。
 
@@ -48,7 +48,7 @@ blog.gyoza.beer
 後からコミットログを見たら、勝手にCNAMEファイルがコミットされてました。  
 自分のアカウントでコミットされているし、もう少し自動生成と分かるコメント入れてコミットして欲しいですね。
 
-{{% img src="images/github_commit_cname.png" %}}
+{{% img src="images/github_commit_cname.png" w="260" h="78" %}}
 
 なお、この設定の影響は `github.io/ユーザ名/リポジトリ名` 形式のリポジトリにも及ぶようで、例えばabcリポジトリ自体には何も設定しなくても `http://blog.gyoza.beer/abc` でアクセスできるようになってました。
 
@@ -56,7 +56,7 @@ blog.gyoza.beer
 
 お名前.comの管理コンソールからDNSにCNAMEレコードを追加します。
 
-{{% img src="images/oname-com-dns-setting.png" %}}
+{{% img src="images/oname-com-dns-setting.png" w="260" h="58" %}}
 
 10分ぐらい待つとDNSに反映されました。
 

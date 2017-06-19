@@ -41,7 +41,7 @@ deploy:
 hugoのビルド結果がpublicフォルダに出力され、repoで指定したリポジトリにプッシュされます。  
 `$GITHUB_TOKEN`は、GithubでPersonal access tokenを発行し、Travis.ciの環境変数に値を登録しました。
 
-{{% img  src="images/deploy-hugo-on-githubpages1.png" %}}
+{{% img  src="images/deploy-hugo-on-githubpages1.png" w="260" h="170" %}}
 
 注意点としは、毎回 `git push -f` するので、出力先リポジトリの履歴が残らないことです。  
 履歴はソースの方で追えば良いので、特に問題はないと思います。  

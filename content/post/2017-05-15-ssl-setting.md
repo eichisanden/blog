@@ -33,19 +33,19 @@ https://www.cloudflare.com/
 
 まずは自分のドメインを検索します。（※画像はサブドメインを検索していますが本来はApexドメインを検索します）
 
-{{% img src="images/cloud_flare1.png" %}}
+{{% img src="images/cloud_flare1.png" w="260" h="118" %}}
 
 そうすると、現状のDNSの設定を持って来てくれます。
 
-{{% img src="images/cloud_flare2.png" %}}
+{{% img src="images/cloud_flare2.png" w="260" h="153" %}}
 
 プランを選択します。今回はFree版を選択します。
 
-{{% img src="images/cloud_flare3.png" %}}
+{{% img src="images/cloud_flare3.png" w="260" h="176" %}}
 
 ネームサーバーが表示されるのでメモっておきます
 
-{{% img src="images/cloud_flare4.png" %}}
+{{% img src="images/cloud_flare4.png" w="260" h="151" %}}
 
 ここまででウィザードでの設定は完了です。  
 特に何も聞かれませんが、SSLの設定は「Flexible」という設定になっています。  
@@ -55,7 +55,7 @@ CDNまでSSLにする、というやりたかった設定がデフォルトな�
 
 今度は、お名前.comの設定画面から、ネームサーバーの設定を先ほどメモしたものに変更します。  
 
-{{% img src="images/cloud_flare5.png" %}}
+{{% img src="images/cloud_flare5.png" w="260" h="133" %}}
 
 しばらく待てば設定が反映されます。
 これだけで自分のサイトが、SSL化されています。
@@ -65,18 +65,18 @@ CDNまでSSLにする、というやりたかった設定がデフォルトな�
 今度はhttpsを強制するため、Page Rulesの追加を行います。  
 これにより、httpでアクセスされたら301を返してhttpにリダイレクトされるようになります。
 
-{{% img src="images/cloud_flare6.png" %}}
+{{% img src="images/cloud_flare6.png" w="260" h="148" %}}
 
 # 証明書を確認する
 
 Alaternavite namesがえらいことになってます(笑)  
 証明書はCOMODOみたいです。
 
-{{% img src="images/cloud_flare8.png" %}}
+{{% img src="images/cloud_flare8.png" w="260" h="142.781" %}}
 
 セキュリティのレベルは https://www.ssllabs.com で見るとAランクでした。
 
-{{% img src="images/cloud_flare7.png" %}}
+{{% img src="images/cloud_flare7.png" w="260" h="110.375" %}}
 
 # 最後に
 

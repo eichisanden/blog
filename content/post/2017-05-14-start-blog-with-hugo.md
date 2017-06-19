@@ -82,7 +82,7 @@ $ git clone https://github.com/dim0627/hugo_theme_robust.git
 また、 `hasCJKLanguage = true` を追加しておきます。
 これを設定しておかないと、下記イメージのように記事のサマリーが無駄に長く表示されてしまいます。
 
-{{% img src="images/hugo_hasCJKLanguage1.png" %}}
+{{% img src="images/hugo_hasCJKLanguage1.png" w="260" h="235" %}}
 
 ## 最初のコンテンツ生成
 
