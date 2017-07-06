@@ -1,0 +1,33 @@
+<style>
+  .amazon-box {
+    border: 1px solid #CCC;
+    padding: 10px;
+  }
+  .amazon-image {
+    float: left;
+    margin: 0px 12px 1px 0px;
+  }
+  .amazon-info {
+    line-height: 120%;
+    margin-bottom: 10px
+  }
+  .amazon-name {
+    margin-bottom: 10px;
+    line-height: 120%"
+  }
+</style>
+<div class="amazon-box">
+  <div class="amazon-image">
+    <a href="http://www.amazon.co.jp/exec/obidos/ASIN/{{ .Get "itemId" }}/eichisanden-22/ref=nosim/" target="_blank">
+      <img src="https://images-fe.ssl-images-amazon.com/images/I/51hwSe%2BgVeL._SL160_.jpg" alt="{{ .Get "title" }}" />
+    </a>
+  </div>
+  <div class="amazon-info">
+    <div class="amazon-name">
+      <a href="http://www.amazon.co.jp/exec/obidos/ASIN/{{ .Get "itemId" }}/eichisanden-22/ref=nosim/" target="_blank">{{ .Get "title" }}</a>
+    </div>
+    <div>{{ .Get "author" }} <br />{{ .Get "publisher" }} <br />
+    </div>
+  </div>
+  <div style="clear: left"></div>
+</div>
