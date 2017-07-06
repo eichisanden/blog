@@ -5,7 +5,7 @@ draft = false
 tags = ["GitLab", "GitLab Pages", "GitHub", "GitHub Pages", "Let' Encrypt"]
 thumbnail = "images/gitlab_pages2.png"
 title = "GitHub PagesからGitLab Pagesに移行してみた"
-
+toc = true
 +++
 
 # GitHub PagesからGitLab Pagesに移行してみた

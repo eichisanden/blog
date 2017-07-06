@@ -5,7 +5,7 @@ draft = false
 tags = ["Github", "Github Pages", "独自ドメイン", "DNS"]
 thumbnail = "images/gyoza_beer.jpg"
 title = "Github Pagesを独自ドメインで公開する"
-
+toc = true
 +++
 
 # モチベーション

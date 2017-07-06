@@ -5,7 +5,7 @@ draft = false
 tags = ["チームビルディング", "リーダシップ", "ビジネス実用", "オライリー"]
 thumbnail = "images/elastic_leadership/cover.jpeg"
 title = "「ELASTIC LEADERSHIP」を読んだ"
-
+toc = true
 +++
 
 ネット上で評判が良かったので「エラスティック リーダーシップ」を早速読んでみました。

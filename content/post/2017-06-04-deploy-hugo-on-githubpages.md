@@ -5,7 +5,7 @@ draft = false
 tags = ["Github", "Github Pages", "Travis.ci"]
 thumbnail = "images/docs-desktop.svg"
 title = "Github Pages/HugoのブログをTravice.ciでデプロイする"
-
+toc = true
 +++
 
 ## Hugoのビルド

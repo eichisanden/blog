@@ -5,7 +5,7 @@ draft = false
 tags = ["Github", "Github Pages", "SSL"]
 thumbnail = "images/cloud_flare_top.png"
 title = "Cloud Flareで独自ドメインのGihub Pagesをhttps化する"
-
+toc = true
 +++
 
 独自ドメインで公開しているGihub Pagesをhttps化してみました。  
