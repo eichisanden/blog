@@ -1,17 +1,24 @@
-  .amazon-box {
-    border: 1px solid #CCC;
-    padding: 10px;
-  }
-  .amazon-image {
-    float: left;
-    margin: 0 12px 0 0;
-  }
-  .amazon-info {
-    line-height: 120%;
-  }
-  .amazon-name {
-    margin-bottom: 10px;
-  }
-  .clear-left {
-    clear: left;
-  }
+.about-name {
+  margin-bottom: 10px;
+}
+.about-sns-icon {
+  color: #000;
+}
+
+.amazon-box {
+  border: 1px solid #CCC;
+  padding: 10px;
+}
+.amazon-image {
+  float: left;
+  margin: 0 12px 0 0;
+}
+.amazon-info {
+  line-height: 120%;
+}
+.amazon-name {
+  margin-bottom: 10px;
+}
+.clear-left {
+  clear: left;
+}
