@@ -17,5 +17,8 @@ enableRobotsTXT = true
   fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
   #logofontfamily = "Lobster, cursive" # Optional, Override logo font.
 
+  # My custom settings
+  amazonId = "eichisanden-22"
+
 [outputs]
 page = [ "HTML", "AMP" ]
