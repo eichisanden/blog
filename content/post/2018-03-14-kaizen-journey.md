@@ -1,9 +1,8 @@
 +++
-draft = true
 thumbnail = "images/kaizen-journey-thumb.png"
 tags = ["スクラム","KAIZEN"]
 categories = ["書評"]
-date = "2018-03-14T22:34:00+09:00"
+date = "2018-03-16T12:33:07+09:00"
 title = "「KAIZEN JOURNEY」を読んだ"
 +++
 
