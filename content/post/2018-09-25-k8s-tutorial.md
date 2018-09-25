@@ -2,7 +2,7 @@
 thumbnail = "images/k8s-tutorial/dashboard.png"
 categories = ["技術メモ"]
 tags = ["Kubenetes", "Docker"]
-title = "知識ゼロで Kubenates Tutorialをやってみた"
+title = "知識ゼロで Kubernetes Tutorialをやってみた"
 date = "2018-09-25T20:37:07+09:00"
 +++
 
