@@ -1,7 +1,7 @@
 +++
 thumbnail = "images/k8s-tutorial/dashboard.png"
 categories = ["技術メモ"]
-tags = ["Kubenetes", "Docker"]
+tags = ["Kubernetes", "Docker"]
 title = "知識ゼロで Kubernetes Tutorialをやってみた"
 date = "2018-09-25T20:37:07+09:00"
 +++
@@ -76,7 +76,7 @@ $ kubectl config use-context minikube
 Switched to context "minikube".
 ```
 
-`kubectl cluster-info`を叩くと、Kubenetes masterとKubeDNSというのが動いているようです。
+`kubectl cluster-info`を叩くと、Kubernetes masterとKubeDNSというのが動いているようです。
 
 ```
 $ kubectl cluster-info
