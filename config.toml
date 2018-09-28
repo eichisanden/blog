@@ -11,11 +11,20 @@ hasCJKLanguage = true
 enableRobotsTXT = true
 
 [params]
+  description = ""
   dateformat = "Jan 2, 2006" # Optional
   # Fonts settings.
     googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
   fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
   #logofontfamily = "Lobster, cursive" # Optional, Override logo font.
+
+[params.author]
+  thumbnail = "images/a1.png"
+  name = "A1"
+  description = "<p>プログラマです</p><p>Vim派/JIS配列派/タケノコ派</p>"
+  #facebook = "https://www.facebook.com/daisuke.tsuji.735"
+  twitter = "https://twitter.com/eichisanden"
+  github = "https://github.com/eichisanden"
 
   # My custom settings
   amazonId = "eichisanden-22"

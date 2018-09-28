@@ -88,7 +88,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
 まだ全く使いこなせませんが、`minikube dashboard` でダッシュボードが開けるようです。メモリは1.5GBぐらい食っていて貧弱な私のPCでは辛いです
 
-{{% img src="images/k8s-tutorial/dashboard.png" w="1242" h="748" %}}
+{{% img src="images/k8s-tutorial/dashboard.png" w="942" h="448" %}}
 
 
 ## サンプルアプリケーションの作成
