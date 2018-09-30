@@ -1,9 +1,8 @@
 +++
-draft = true
 thumbnail = "images/docker4mac-k8s/setting-top.png"
 categories = ["技術メモ"]
 tags = ["Kubernetes", "Docker"]
-date = "2018-09-28T18:06:53+09:00"
+date = "2018-10-01T01:18:53+09:00"
 title = "Docker for MacでKubernetesを使う"
 description = ""
 +++
