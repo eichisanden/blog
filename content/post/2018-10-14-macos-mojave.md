@@ -67,6 +67,62 @@ https://gori.me/mac/mac-tips/110780
 ----
 切り替えたばかりなので、まだ何か起きそう。何か起きたら追記します。
 
+## vimの起動でエラー
+
+(2018/10/16 追記) vimの起動時にpowerlineでエラーが出ることに気づいたので対応しました
+
+```
+$ vi
+Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+  File "/Users/eiichi/.vim/bundle/powerline/powerline/__init__.py", line 6, in <module>
+    import logging
+  File "/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py", line 26, in <module>
+    import sys, os, time, cStringIO, traceback, warnings, weakref, collections
+ImportError: dlopen(/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/time.so, 2): no suitable image found.  Did find:
+^I/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/time.so: code signature in (/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/time.so) not valid for use in process using Library Validation: mapped file has no cdhash, completely unsigned? Code has to be at least ad-hoc signed.
+An error occurred while importing powerline module.
+This could be caused by invalid sys.path setting,
+or by an incompatible Python version (powerline requires
+Python 2.6, 2.7 or 3.2 and later to work). Please consult
+the troubleshooting section in the documentation for
+possible solutions.
+Unable to import powerline, is it installed?
+Press ENTER or type command to continue
+```
+
+まず、自分はappleがビルドしたOS標準のvimを使ってましたが、Mojaveにしたことで更新されたようです。root@apple.com強そう
+
+```
+$ vim --version
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Aug 17 2018 15:22:29)
+Included patches: 1-503, 505-680, 682-1283
+Compiled by root@apple.com
+```
+
+python2でエラーになっていますが、そんなエラーよく分からんので既存の環境はサクッと捨てて
+Homebrewでpython3と、vimをインストールします  
+vimは `--with-override-system-vi` オプションで付きでインストールして、brewで入れた方を使うようにします。これでエラーが出なくなりました
+
+```
+$ brew install python
+$ brew install vim --with-override-system-vi
+# Homebrewで入れた方が起動している
+$ vim --version
+VIM - Vi IMproved 8.1 (2018 May 18, compiled Oct 16 2018 15:07:10)
+macOS version
+Included patches: 1-450
+Compiled by Homebrew
+（省略）
+# python2が無効になりpython3が有効になっている
++comments          +libcall           -python            +viminfo
++conceal           +linebreak         +python3           +vreplace
+```
+
+[参考]  
+https://github.com/powerline/powerline/issues/1947　　
+https://qiita.com/owlbeck/items/2df2ab50eedd32011ffd
+
 ## 新機能
 
 続いて、使える新機能がないか確認していきます。
