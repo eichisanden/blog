@@ -46,6 +46,17 @@ VOLUME [ "/usr/local/pgsql/data" ]
 
 https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only
 
+## Docker ToolBoxで立ち上げたコンテナのPostgreSQLに接続できない
+
+`docker run -p <host-port>:<container-port>` でポートを紐づけてるのに全然繋がらなくてしばらく悩みましたが、  
+Docker ToolBox は VirtualBoxで動いているので、VirtualBoxでもポートフォワーディング設定をしないと駄目という落ちでした。  
+VirtualBox の 設定 -> ネットワーク のアダプター1 のポートフォワーディングルールのホストポート、ゲストポートの両方に -p で指定した`<host-port>`を指定して登録することでうまく接続できるようになりました。
+
+|ホストポート|ホストIP  |ゲストポート|
+|:----------|:--------|:----------|
+|host-port|127.0.0.1|host-port|
+
+
 ## おわりに
 
 今回、分かってみればダサくて恥ずかしいミスですが、実際に手を動かしてみないと（少なくとも自分には）覚えにくかったと思います。  
