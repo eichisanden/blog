@@ -123,6 +123,68 @@ Compiled by Homebrew
 https://github.com/powerline/powerline/issues/1947　　
 https://qiita.com/owlbeck/items/2df2ab50eedd32011ffd
 
+## Virtual Boxが無効になっている
+
+気づけばVirtualBoxが無効になってました。
+
+{{% img src="images/macos-mojave/virtualbox1.png" w="518" h="370" %}}
+
+VirtualBox 5.1.10はMojaveに対応していないようです。
+
+{{% img src="images/macos-mojave/virtualbox2.png" w="532" h="269" %}}
+
+[こちらの記事](https://qiita.com/kai_kou/items/4f554a515ea7926702df)を見ると、VirtualBoxをバージョンアップすれば良いようなので 5.2に上げましたが、こんどはVagrant 1.9.4がVirtualBox5.1までしか対応してませんでした。 
+
+```
+$ vagrant up
+＜省略＞
+The provider 'virtualbox' that was requested to back the machine
+'default' is reporting that it isn't usable on this system. The
+reason is shown below:
+
+Vagrant has detected that you have a version of VirtualBox installed
+that is not supported by this version of Vagrant. Please install one of
+the supported versions listed below to use Vagrant:
+
+4.0, 4.1, 4.2, 4.3, 5.0, 5.1
+
+A Vagrant update may also be available that adds support for the version
+you specified. Please check www.vagrantup.com/downloads.html to download
+the latest version.
+```
+
+Vagrantを2.2.0にバージョンアップしてvagrant upしたら、今度はvagrant-vbguestプラグインが古いと言われたので、`vagrant plugin update`しました。ここまでしたやっと使えるようになりました。
+
+```
+vagrant up
+Vagrant failed to initialize at a very early stage:
+
+The plugins failed to initialize correctly. This may be due to manual
+modifications made within the Vagrant home directory. Vagrant can
+attempt to automatically correct this issue by running:
+
+  vagrant plugin repair
+
+If Vagrant was recently updated, this error may be due to incompatible
+versions of dependencies. To fix this problem please remove and re-install
+all plugins. Vagrant can attempt to do this automatically by running:
+
+  vagrant plugin expunge --reinstall
+
+Or you may want to try updating the installed plugins to their latest
+versions:
+
+  vagrant plugin update
+
+Error message given during initialization: Unable to resolve dependency: user requested 'vagrant-vbguest (= 0.15.2)'
+
+$ vagrant plugin update
+Updating installed plugins...
+Fetching: micromachine-2.0.0.gem (100%)
+Fetching: vagrant-vbguest-0.16.0.gem (100%)
+Updated 'vagrant-vbguest' to version '0.16.0'!
+```
+
 ## 新機能
 
 続いて、使える新機能がないか確認していきます。
