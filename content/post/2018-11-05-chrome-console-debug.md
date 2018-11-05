@@ -10,10 +10,15 @@ description = ""
 
 https://developers.google.com/web/tools/chrome-devtools/console/?hl=ja
 
-$$(selector)
-指定された CSS セレクターに一致するすべての要素の配列を返します。 document.querySelectorAll() のエイリアスです。
+- $(selector)  
+指定された CSS セレクターに一致する最初の要素を返します。
+document.querySelector() のショートカットです。
+ただし、jQueryを使っているサイトではそちらが使われるので使えないケースが多いと思います。
+その場合は $$()[0]で代用すれば良いでしょう。
 
-指定された CSS セレクターに一致する最初の要素を返します。 document.querySelector() のショートカットです。
+- $$(selector)  
+指定された CSS セレクターに一致するすべての要素の配列を返します。 document.querySelectorAll() のエイリアスです。
+返される配列は
 
 $x()	指定された XPath に一致する要素の配列を返します。
 
