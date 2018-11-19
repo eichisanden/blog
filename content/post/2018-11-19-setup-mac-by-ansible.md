@@ -284,6 +284,8 @@ DockやFinderの設定なども自動化してみました。
 
 なんでも自動化すれば良いものではないのでやりすぎは注意ですが、まだ完成していないのでちまちま直してくつもりです。
 あと、あまりAnsibleに詳しくない自分にとって練習の題材には良かったかも。あとは何年か後にMacを買い換えた俺がこのエントリを思い出して喜んでくれたら幸いです。
+あと、作ったものはgithubに置いてあります。
+https://github.com/eichisanden/mackbook-playbook
 
 ＜参考＞  
 - [Mac の開発環境構築を自動化する (2015 年初旬編)](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)  
