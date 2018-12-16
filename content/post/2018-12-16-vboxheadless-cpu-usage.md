@@ -11,6 +11,7 @@ VirtualBoxのCentOS7を動かすとCPUが荒ぶって困っていたのですが
 
 ## 環境
 
+- Macbook Air 2018
 - VirtualBox 5.2.22
 - Vagrant 2.2.0
 - ホストOS: MacOS 10.14.2
@@ -45,5 +46,7 @@ VirtualBox(Vagrant)でCentOS7を立ち上げてしばらくすると、ホスト
 
 UbuntuとCentOS6のゲストOSを試したところ、CentOS7でしか発生しない問題であることが分かった。  
 また、発生するタイミングもPCのスリープからの復帰直後に発生するという法則も分かってきた。  
+最初は全く意味が分からなかったので、これが分かっただけでも大きな進歩。  
 だがしかし、原因がさっぱり分からないので対症療法でしかないがスリープさせる前に vagrant suspend か vagrant haltでVMを明示的に止めておくことで回避している。  
+Macbook Airの旧モデルでCentOS7をVirtualBoxで動かした時はこんな問題起きなかったので、Macbook自体かMojaveに関連する問題なのかな。  
 ちゃんとした対応方法が分かったら追記します。
