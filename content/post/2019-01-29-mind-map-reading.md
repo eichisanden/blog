@@ -1,9 +1,8 @@
 +++
-draft = true
 thumbnail = "images/mind-map-reading.JPG"
 tags = ["マインドマップ"]
 categories = ["書評"]
-date = "2019-01-29T13:28:08+09:00"
+date = "2019-01-29T20:30:00+09:00"
 title = "インプットをアウトプットに変える「マインドマップ読書術」"
 description = "「マインドマップ読書術」の紹介"
 +++
