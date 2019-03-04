@@ -9,7 +9,7 @@ title = "High Sierraへのアップデートで「OSInstall.mpkgは存在ない�
 いい加減にSierraからHigh Sierraにアップデートしようとしたら、
 「OSInstall.mpkgは存在ないか破損しているようです」エラーにハマりました。
 
-{{% img src="images/high_sierra/high_sierra_error.jpg" w="260" h="195" %}}
+{{% img src="images/high_sierra/high_sierra_error.jpg" w="800" h="600" %}}
 
 言われた通りに再起動後に試みるも状況変わらず。  
 ネットで調べるとTime Machineから復元して、みたいな話ばかり出てきて、

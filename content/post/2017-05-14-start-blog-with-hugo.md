@@ -1,19 +1,17 @@
 +++
 date = "2017-05-14T12:56:15+09:00"
 draft = false
-title = "Github Pages/Hugoでブログを作成してみた"
+title = "GitHub Pages/Hugoでブログを作成してみた"
 categories = ["技術メモ"]
 tags = ["Hugo", "Github", "Github Pages"]
-thumbnail = "images/hugo.png"
-toc = true
+thumbnail = "images/start-blog-with-hugo/hugo.png"
 +++
 
----
-# はじめに
+## はじめに
 
 本の感想やポエムなど、少し長めの文章を書く場所が欲しくて、ブログを設置してみました。  
-はてなブログを使うのが楽だし、SEO的には有利そうですが、前々から使ってみたかったGithub Pagesにブログを作成してみました。  
-ブログを書くたびにGithubに草が生えるし、モチベーションのキープに効果があるかも。  
+はてなブログを使うのが楽だし、SEO的にも有利そうですが、前々から使ってみたかったGitHub Pagesにブログを作成してみました。  
+ブログを書くたびにGitHubに草が生えるし、モチベーションのキープに効果があるかも。  
 そこでまず、どの静的サイトジェネレータを使うかを検討しました。  
 
 - StaticGen https://www.staticgen.com/
@@ -21,7 +19,7 @@ toc = true
 
 上記サイトで調べてみると、世の中にはものすごい沢山の静的サイトジェネレータがあることが分かります。  
 自分が知っているのは、Jekyll、Middleman、Hubpress、Sphinxぐらいでした。  
-最初はGithubのスターの数が他を圧倒しているしGithubが公式に対応しているJekyllにしようと思いましたが、ページ生成が遅いとのことなので速いと評判のHugoを採用しました。  
+最初はGitHubのスターの数が他を圧倒しているしGitHubが公式に対応しているJekyllにしようと思いましたが、ページ生成が遅いとのことなので速いと評判のHugoを採用しました。  
 
 - Hugo https://gohugo.io/
 
@@ -36,11 +34,11 @@ HugoはGoで書かれているため公開されたバイナリを実行する�
 
 Robust http://themes.gohugo.io/robust/
 
-# セットアップ
+## セットアップ
 
 公式サイトに従ってセットアップしていきます。
 
-## Hugoのインストール
+### Hugoのインストール
 
 HomebrewでHugoをインストールします。
 
@@ -48,7 +46,7 @@ HomebrewでHugoをインストールします。
 $ brew install hugo
 ```
 
-## サイトのテンプレート生成
+### サイトのテンプレート生成
 
 ```
 $ hugo new site eichisanden.github.io
@@ -71,7 +69,7 @@ $ hugo new site eichisanden.github.io
 
 ## テーマの設定
 
-先ほど調べておいたテーマをGithubから取得します。  
+先ほど調べておいたテーマをGitHubから取得します。  
 
 ```
 $ cd themes
@@ -82,7 +80,11 @@ $ git clone https://github.com/dim0627/hugo_theme_robust.git
 また、 `hasCJKLanguage = true` を追加しておきます。
 これを設定しておかないと、下記イメージのように記事のサマリーが無駄に長く表示されてしまいます。
 
-{{% img src="images/hugo_hasCJKLanguage1.png" w="260" h="235" %}}
+{{% img src="images/start-blog-with-hugo/hugo_hasCJKLanguage1.png" w="439" h="397" %}}
+
+設定後は適当な長さでぶった切ってくれます。
+
+{{% img src="images/start-blog-with-hugo/hugo_hasCJKLanguage2.png" w="439" h="397" %}}
 
 ## 最初のコンテンツ生成
 
@@ -160,6 +162,6 @@ $ git add --all
 $ git commit -m "Initial commit"
 ```
 
-# 最後に
+## 最後に
 
 Word Pressのように凝ったことはできませんが、静的ファイルをアップロードしているだけなので高パフォーマンスなブログを作成できて良いのでと思います。

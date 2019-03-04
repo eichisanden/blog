@@ -17,7 +17,7 @@ toc = true
 
 お名前.comの管理画面でDNSのAレコードをGit LabページのIPアドレス（52.167.214.135）に向けておく。
 
-{{% img src="images/gitlab_pages1.png" w="260" h="127" %}}
+{{% img src="images/gitlab_pages1.png" w="671" h="327" %}}
 
 
 ## Let's EncryptでSSL/TLS証明書を設定する

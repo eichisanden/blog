@@ -1,18 +1,16 @@
 +++
 categories = ["技術メモ"]
 date = "2017-05-14T23:40:05+09:00"
-draft = false
-tags = ["Github", "Github Pages", "独自ドメイン", "DNS"]
-thumbnail = "images/gyoza_beer.jpg"
-title = "Github Pagesを独自ドメインで公開する"
-toc = true
+tags = ["GitHub", "GitHub Pages", "独自ドメイン", "DNS"]
+thumbnail = ""
+title = "GitHub Pagesを独自ドメインで公開する"
 +++
 
-# モチベーション
+## モチベーション
 
-長いことエンジニアをしていますが、独自ドメインの取得やDNSの設定など実際にやったことがなかったので、そこらへんの知識を得るため Github Pagesで公開したブログに独自ドメインを設定してみました。
+長いことエンジニアをしていますが、独自ドメインの取得やDNSの設定など実際にやったことがなかったので、そこらへんの知識を得るため GitHub Pagesで公開したブログに独自ドメインを設定してみました。
 
-GihubのHelpを見ながら設定していきます。
+GitHubのHelpを見ながら設定していきます。
 
 - https://help.github.com/articles/using-a-custom-domain-with-github-pages/
 
@@ -20,19 +18,19 @@ GihubのHelpを見ながら設定していきます。
 
 まず、お名前.comで `gyoza.beer` ドメインを取得しました。  
 beerドメインに一目惚れしてしまい、beerに合うものと考えたところgyoza.beerに決定w  
-初年も更新も確か2,980円と、決して安くはないけどバカ高くもないでまあ良し。
+初年も更新も確か2,980円と、決して安くはないけどバカ高くもないでまあ良しとします。
 
-他の用途でも使いたくなるかもしれないので、 `blog.gyoza.beer` というサブドメインをGithub Pagesに割り当てることにします。  
+他の用途でも使いたくなるかもしれないので、 `blog.gyoza.beer` というサブドメインをGitHub Pagesに割り当てることにします。  
 なので、この先はCustom Subdomainの設定手順に従って進めます。
 
 https://help.github.com/articles/setting-up-a-custom-subdomain/
 
-## Github にドメインを設定する
+## GitHub にドメインを設定する
 
-Github Pagesで公開しているリポジトリのSettingsからCustom Domainに `blog.gyoza.beer` を設定します。  
+GitHub Pagesで公開しているリポジトリのSettingsからCustom Domainに `blog.gyoza.beer` を設定します。  
 自分の場合は `ユーザ名.github.io` リポジトリに設定します。
 
-{{% img src="images/github_setting_custom_domain.png" w="260" h="209" %}}
+{{% img src="images/custom_domain/github_setting_custom_domain.png" w="740" h="594" %}}
 
 ネットで色々調べてると、CNAMEファイルを手動で追加する手順が出てきますが、Helpによるとこの設定をした時点で自動的にCNAMEファイルが生成されるようでした。
 
@@ -48,7 +46,7 @@ blog.gyoza.beer
 後からコミットログを見たら、勝手にCNAMEファイルがコミットされてました。  
 自分のアカウントでコミットされているし、もう少し自動生成と分かるコメント入れてコミットして欲しいですね。
 
-{{% img src="images/github_commit_cname.png" w="260" h="78" %}}
+{{% img src="images/custom_domain/github_commit_cname.png" w="800" h="240" %}}
 
 なお、この設定の影響は `github.io/ユーザ名/リポジトリ名` 形式のリポジトリにも及ぶようで、例えばabcリポジトリ自体には何も設定しなくても `http://blog.gyoza.beer/abc` でアクセスできるようになってました。
 
@@ -56,7 +54,7 @@ blog.gyoza.beer
 
 お名前.comの管理コンソールからDNSにCNAMEレコードを追加します。
 
-{{% img src="images/oname-com-dns-setting.png" w="260" h="58" %}}
+{{% img src="images/custom_domain/onamae-com-dns-setting.png" w="679" h="151" %}}
 
 10分ぐらい待つとDNSに反映されました。
 
@@ -72,7 +70,7 @@ github.map.fastly.net.	7	IN	A	151.101.72.133
 ```
 
 実は最初は良くわかってなくて、サブドメインなのにAレコードを設定していました。  
-普通に動くので気づいていなかったけど、Githubから警告のメールが来てCNAMEでの設定に変更しています。
+普通に動くので気づいていなかったけど、GitHubから警告のメールが来てCNAMEでの設定に変更しています。
 
 ```
 Titile: [eichisanden/eichisanden.github.io] Page build warning
@@ -88,7 +86,6 @@ For information on troubleshooting Jekyll see:
 If you have any questions you can contact us by replying to this email.
 ```
 
-# さいごに
+## さいごに
 
-仕事ではDNSを触ることはまず無いので、プライベートで触れておくことは重要だなと思いました。  
-次はhttps化していきたいと思います。
+仕事ではDNSを触ることはまず無いので、プライベートで触れておくことは重要だなと思いました。次はhttps化していきたいと思います。
