@@ -2,7 +2,7 @@
 categories = ["技術メモ"]
 date = "2017-05-14T23:40:05+09:00"
 tags = ["GitHub", "GitHub Pages", "独自ドメイン", "DNS"]
-thumbnail = ""
+thumbnail = "images/eye-catch/github.png"
 title = "GitHub Pagesを独自ドメインで公開する"
 +++
 

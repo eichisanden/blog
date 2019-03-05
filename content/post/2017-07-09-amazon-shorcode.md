@@ -3,7 +3,7 @@ categories = ["技術メモ"]
 date = "2017-07-09T23:50:13+09:00"
 draft = false
 tags = ["Hugo", "Amazon"]
-thumbnail = ""
+thumbnail = "images/eye-catch/hugo.png"
 title = "HugoのShortcodesを自作してみる"
 
 +++
