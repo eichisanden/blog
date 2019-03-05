@@ -9,6 +9,7 @@ disqusShortname="a1-blog"
 hasCJKLanguage = true
 # Build robots.txt file
 enableRobotsTXT = true
+enableEmoji = true
 
 [params]
   description = ""
