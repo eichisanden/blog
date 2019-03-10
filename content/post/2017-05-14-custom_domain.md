@@ -48,7 +48,7 @@ blog.gyoza.beer
 
 {{% img src="images/custom_domain/github_commit_cname.png" w="800" h="240" %}}
 
-なお、この設定の影響は `github.io/ユーザ名/リポジトリ名` 形式のリポジトリにも及ぶようで、例えばabcリポジトリ自体には何も設定しなくても `http://blog.gyoza.beer/abc` でアクセスできるようになってました。
+なお、この設定の影響は `github.io/ユーザ名/リポジトリ名` 形式のリポジトリにも及ぶようです。例えばabcリポジトリ自体には何も設定しなくても `http://blog.gyoza.beer/abc` でアクセスできるようになってました。
 
 ## DNSの設定
 

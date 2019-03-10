@@ -1,5 +1,13 @@
 {
-  "filters": {},
+  "filters": {
+    "whitelist": {
+      // HugoのFront MatterとShort Codeを無視する
+      "allow": [
+        "/^\\+{3}[\\s\\S]*?\\+{3}/m",
+        "/^{{%[\\s\\S]*?%}}/m"
+      ]
+    }
+  },
   "rules": {
     // 技術文書向けの textlint ルールプリセット
     "preset-ja-technical-writing": {
@@ -32,9 +40,7 @@
       },
       "ja-no-mixed-period": {
         // 文末の句点記号に「。」を使う
-        "periodMark": "。",
-        // HugoのFront Matterの「+++」を文末の句点記号に追加
-         "allowPeriodMarks": ["+++"]
+        "periodMark": "。"
       },
       // 二重否定は使用しない
       "no-double-negative-ja": true,

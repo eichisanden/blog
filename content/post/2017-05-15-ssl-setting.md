@@ -8,12 +8,11 @@ title = "Cloud Flareで独自ドメインのGihub Pagesをhttps化する"
 toc = true
 +++
 
-独自ドメインで公開しているGihub Pagesをhttps化してみました。  
+独自ドメインで公開しているGihub Pagesをhttps化してみました。
 
-https://github.com/isaacs/github/issues/156
+- https://github.com/isaacs/github/issues/156
 
-こちらで意見交換されてますが、Githubは独自に証明書を設定する機能を実装していません。  
-
+こちらで意見交換されてますが、Githubは独自に証明書を設定する機能を実装していません。
 仕方なく別の方法を調べてみるとCDNを使用したリバースプロキシをhttps化する方法が一般的なようです。  
 ただし、証明書をサーバに設置する普通のやり方と比較すると、欠点もあります。
 
@@ -35,7 +34,7 @@ https://www.cloudflare.com/
 
 {{% img src="images/cloud_flare1.png" w="800" h="364" %}}
 
-そうすると、現状のDNSの設定を持って来てくれます。
+そうすると、現状のDNSの設定を持ってきてくれます。
 
 {{% img src="images/cloud_flare2.png" w="800" h="471" %}}
 
@@ -53,7 +52,7 @@ CDNまでSSLにする、というやりたかった設定がデフォルトな�
 
 # ネームサーバーの変更
 
-今度は、お名前.comの設定画面から、ネームサーバーの設定を先ほどメモしたものに変更します。  
+今度は、お名前.comの設定画面から、ネームサーバーの設定を先ほどメモしたものに変更します。
 
 {{% img src="images/cloud_flare5.png" w="695" h="367" %}}
 
