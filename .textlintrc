@@ -101,6 +101,14 @@
     // 連用中止法を検知する
     "no-renyo-chushi": true,
     // 全角文字と半角英字の間に半角スペース、ただし次の全角文字 [、。「 」（）｛｝【】『』] の前後には不要
-    "one-white-space-between-zenkaku-and-hankaku-eiji": false
+    "one-white-space-between-zenkaku-and-hankaku-eiji": false,
+    // リンク切れ検出
+    "no-dead-link": {
+      "checkRelative": true,
+      "baseURI": null,
+      "ignore": [],
+      "preferGET": [],
+      "ignoreRedirects": false
+    }
   }
 }
