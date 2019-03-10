@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "textlint content/post/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eichisanden/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eichisanden/blog/issues"
+  },
+  "homepage": "https://github.com/eichisanden/blog#readme",
+  "devDependencies": {
+    "textlint-rule-preset-ja-technical-writing": "^3.1.2"
+  },
+  "dependencies": {
+    "textlint": "^11.2.3"
+  }
+}
