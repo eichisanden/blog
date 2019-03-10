@@ -5,18 +5,17 @@ draft = false
 tags = ["Hugo", "Amazon"]
 thumbnail = "images/eye-catch/hugo.png"
 title = "HugoのShortcodesを自作してみる"
-
 +++
 
 Hugoでは、Markdownで書けないことはHTMLを直接書くわけですが、Shortcodesというテンプレート化する仕組みがあります。
 
 https://gohugo.io/extras/shortcodes/
 
-TwitterやYoutubeの埋め込みはビルドインのもので出来るのですが、Amazonにリンク貼るものがなかったので自作してみました。  
+TwitterやYoutubeの埋め込みはビルドインのもので出来るのですが、Amazonにリンク貼るものがなかったので自作してみました。
 
 ## 完成イメージ
 
-こんな感じにAmazonへのリンクを表示するシンプルなものを作っていきます。  
+こんな感じにAmazonへのリンクを表示するシンプルなものを作っていきます。
 
 {{% img src="images/hugo-shortcodes/shortcode1.png" caption="完成イメージ" w="759px" h="201px" %}}
 
@@ -24,7 +23,7 @@ TwitterやYoutubeの埋め込みはビルドインのもので出来るのです
 
 amazonという名前でShortCodeを作成して、すべてパラメータで渡すスタイルにしました。  
 商品コードだけ指定して動的に検索する仕組みにするのも可能ですが、JSONを取得するAPIを自前で作ったり結構大変です。  
-今回は個人使用だし、頻繁に使うわけじゃないのでこれで十分です。  
+今回は個人使用だし、頻繁に使うわけじゃないのでこれで十分です。
 
     {{%/* amazon 
       itemId="4873118026"

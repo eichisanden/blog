@@ -8,7 +8,7 @@ description = "新しいMacbook Airを買ったのでの環境構築をAnsible�
 +++
 
 私の記憶が確かなら...2015年ごろMacの開発環境構築のAnsible化が流行ったと記憶しています。
-当時、自分もやってみようかなと思ってましたが、Macを買い換えるタイミングもないし何となく今まで来ていたのですが、先日MacBookを買い換えて再セットアップが必要になったので、今更ながらやってみました。
+当時、自分もやってみようかなと思ってましたが、Macを買い換えるタイミングもないし何となく今まで来ていたので、先日MacBookを買い換えて再セットアップが必要になったため今更ながらやってみました。
 将来、Macを買い換えた時の自分のためが8割ですが、探すと古い記事が多くてAnsibleやHomebrewが結構変わっているので、2018年版として役に立つこともあるかもと思ったので記事にしてみます。
 
 ## 環境
@@ -21,7 +21,7 @@ description = "新しいMacbook Airを買ったのでの環境構築をAnsible�
 ## Homebrew のインストール
 
 まずはHomebrewを入れないことには始まりませんので[公式サイト](https://brew.sh/index_ja)の手順に従ってインストールしましょう。
-（そういえば、この時点でXCodeを全く意識してなかったけどすんなり通ってしまった...何か変わったか..）
+（そういえば、この時点でXCodeを全く意識してなかったけどすんなり通ってしまった...何か変わったのかな..）
 
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -72,7 +72,7 @@ echo localhost > hosts
 ### Homebrew-caskパッケージのインストール
 
 [homebrew_caskモジュール](https://docs.ansible.com/ansible/2.5/modules/homebrew_cask_module.html)で MacOSアプリをインストールしていきます。
-コード自体は特筆することは特にありませんが、これ全部サイト回ってインストールしてくのは大変なのですごい楽です。
+コード自体特筆することは特にありませんが、これ全部サイト回ってインストールしてくのは大変なのですごい楽です。
 
 ```yml
     - name: install homebrew cask packages
@@ -98,7 +98,7 @@ echo localhost > hosts
 
 [homebrewパッケージ](https://docs.ansible.com/ansible/2.7/modules/homebrew_module.html)
 でインストールしていきます。
-以前はハッシュのリストを `with_items` でループさせる手順が多く見られましたが今は非推奨みたいで配列で回しました
+以前はハッシュのリストを`with_items`でループさせる手順が多く見られましたが今は非推奨みたいで配列で回しました。
 
 ```yml
     - name: install homebrew packages
@@ -137,7 +137,7 @@ echo localhost > hosts
 oh-my-zshはshellでインストールするので、冪等性は自分で確保しないといけません。
 statで`~/.oh-my-zsh/`を存在チェックした結果を変数に格納して、存在しない場合だけインストールします。
 デフォルトシェルの変更は Ansibleに標準で入っている `user` Moduleで行いました。
-また、個人で使うなら、ログインユーザのnameはベタ書きでも良いのですが、公開することを考えて `ansible_ssh_user`変数から取得するようにしています。
+また、個人で使うならログインユーザのnameはベタ書きでも良いのですが、公開することを考えて `ansible_ssh_user`変数から取得するようにしています。
 
 ```yml
     - name: 'check oh-my-zsh'
@@ -198,7 +198,7 @@ playbook.ymlに戻って、先ほど取得したRoleで必要な`mas_installed_a
 ```
 
 あとはrolesに `geerlingguy.mas` を定義します。Playbookを実行するとRoleが実行されてXCodeがインストールされます。
-（tasksとrolesを同時に使ってるのがイマイチな気がするけど）
+（tasksとrolesを同時に使ってるのはイマイチな気がするけど）
 
 ```yml
   roles:
@@ -244,8 +244,8 @@ roleを下記のように定義します。実行すると、指定したフォ�
 ### MacOSの環境設定
 
 DockやFinderの設定なども自動化してみました。
-標準の`osx_defaults`モジュールでdefaultsコマンドで変更できることが設定可能です。
-キー名を調べるのが結構面倒くさいのと、即反映される設定とkillall Dockとかしてプロセスを上げ直さないと反映されないものとあり試行錯誤しながら設定していきました。
+標準の`osx_defaults`モジュールのdefaultsコマンドで変更できることが設定可能です。
+キー名を調べるのが結構面倒くさいのと、即反映される設定とkillall Dockとかしてプロセスを上げ直さないと反映されないものがあり試行錯誤しながら設定していきました。
 
 ```yml
     - name: 'setting macOS'
@@ -283,7 +283,7 @@ DockやFinderの設定なども自動化してみました。
 ## おわりに
 
 なんでも自動化すれば良いものではないのでやりすぎは注意ですが、まだ完成していないのでちまちま直してくつもりです。
-あと、あまりAnsibleに詳しくない自分にとって練習の題材には良かったかも。あとは何年か後にMacを買い換えた俺がこのエントリを思い出して喜んでくれたら幸いです。
+あと、あまりAnsibleに詳しくない自分にとって練習の題材には良かったです。あとは何年か後にMacを買い換えた俺がこのエントリを思い出して喜んでくれたら幸いです。
 あと、作ったものはgithubに置いてあります。
 https://github.com/eichisanden/mackbook-playbook
 

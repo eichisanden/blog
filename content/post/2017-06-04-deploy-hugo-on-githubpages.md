@@ -21,7 +21,7 @@ go getでHugoを毎回取得しても良いのですが、以下の理由でバ�
 
 https://docs.travis-ci.com/user/deployment/pages/
 
-上記に従って`.travis.yml`を書いていきました。  
+上記に従って`.travis.yml`を書いていきました。
 
 ```
 script:
@@ -44,5 +44,4 @@ hugoのビルド結果がpublicフォルダに出力され、repoで指定した
 {{% img  src="images/deploy-hugo-on-githubpages1.png" w="800" h="524" %}}
 
 注意点としは、毎回 `git push -f` するので、出力先リポジトリの履歴が残らないことです。  
-履歴はソースの方で追えば良いので、特に問題はないと思います。  
-
+履歴はソースの方で追えば良いので、特に問題はないと思いました。

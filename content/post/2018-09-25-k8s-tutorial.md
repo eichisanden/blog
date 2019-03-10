@@ -86,14 +86,14 @@ KubeDNS is running at https://192.168.64.2:8443/api/v1/namespaces/kube-system/se
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
-まだ全く使いこなせませんが、`minikube dashboard` でダッシュボードが開けるようです。メモリは1.5GBぐらい食っていて貧弱な私のPCでは辛いです
+まだ全く使いこなせませんが、`minikube dashboard` でダッシュボードが開けるようです。メモリは1.5GBぐらい食っていて貧弱な私のPCでは辛いです。
 
 {{% img src="images/k8s-tutorial/dashboard.png" w="942" h="448" %}}
 
 
 ## サンプルアプリケーションの作成
 
-NodeでHello Worldするだけのアプリを作成します。server.jsというファイル名で保存します
+NodeでHello Worldするだけのアプリを作成します。server.jsというファイル名で保存します。
 
 ```server.js
 var http = require('http');
@@ -151,7 +151,7 @@ $ kubectl run hello-node --image=hello-node:v1 --port=8080 --image-pull-policy=N
 error: failed to discover supported resources: Get https://192.168.64.2:8443/apis/apps/v1beta1?timeout=32s: http2: no cached connection was available
 ```
 
-単純にもう一度実行したら正常に起動しました。何でだろう。
+単純にもう一度実行したら正常起動しました。何でだろう。
 
 ```
 $ kubectl run hello-node --image=hello-node:v1 --port=8080 --image-pull-policy=Never
@@ -160,7 +160,7 @@ deployment.apps/hello-node created
 
 ## 確認コマンド色々
 
-Podはコンテナを束ねる単位で、DeploymentはPodを管理するもののようですが、確認しろというのでそれぞれコマンドを叩いて状態を確認してみます
+Podはコンテナを束ねる単位で、DeploymentはPodを管理するもののようですが、確認しろというのでそれぞれコマンドを叩いて状態を確認してみます。
 
 ```
 $ kubectl get pods                                                                                                                         NAME                          READY     STATUS    RESTARTS   AGE
@@ -186,7 +186,7 @@ LAST SEEN   FIRST SEEN   COUNT     NAME                                         
 2m          2m           1         hello-node-57c6b66f9c-lz4ll.15572ff32abf3df6   Pod          spec.containers{hello-node}   Normal    Started                 kubelet, minikube       Started container
 ```
 
-最初の方で、`~/.kube/config`を参照しましたが、コマンドでも見れるようです
+最初の方で、`~/.kube/config`を参照しましたが、コマンドでも見れるようです。
 
 ```
 $ kubectl config view
@@ -245,7 +245,7 @@ $ minikube service hello-node
 
 ## ログの確認
 
-`kubectl logs <Pod名>`でログを確認できます。`console.log`したものが見れるようです
+`kubectl logs <Pod名>`でログを確認できます。`console.log`したものが見れるようです。
 
 ```
 $ kubectl logs hello-node-57c6b66f9c-lz4ll
@@ -265,7 +265,7 @@ server.jsで表示しているメッセージを書き換えます。
 >    response.end('Hello World Again!');
 ```
 
-v2としてDockerビルドします
+v2としてDockerビルドします。
 
 ```
 $ docker build -t hello-node:v2 .                                                              
@@ -284,7 +284,7 @@ deployment.extensions/hello-node image updated
 
 ## 後始末
 
-Serviceを削除します
+Serviceを削除します。
 
 ```
 $ kubectl delete service hello-node
@@ -294,19 +294,19 @@ $ kubectl get services                                                          
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   13h
 ```
 
-Deploymentを削除します
+Deploymentを削除します。
 
 ```
 $ kubectl delete deployment hello-node                                                                                                                                                         deployment.extensions "hello-node" deleted
 ```
 
-Dockerイメージも不要なので削除
+Dockerイメージも不要なので削除。
 
 ```
 $ docker rmi hello-node:v1 hello-node:v2 -f
 ```
 
-Minikubeを停止
+Minikubeを停止。
 
 ```
 $ minikube stop
@@ -321,12 +321,13 @@ $ minikube stop                                                                 
 Error stopping machine:  Error stopping host: minikube: Maximum number of retries (60) exceeded
 ```
 
-環境変数も消しておきます
+環境変数も消しておきます。
+
 ```
 $ eval $(minikube docker-env -u)
 ```
 
-Minikube VMも削除しておきます
+Minikube VMも削除しておきます。
 
 ```
 $ minikube delete                                                                                                                                                                              

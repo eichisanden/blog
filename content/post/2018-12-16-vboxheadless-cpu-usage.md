@@ -36,7 +36,7 @@ VirtualBox(Vagrant)でCentOS7を立ち上げてしばらくすると、ホスト
 もともと有効である必要がなかったし警告も出てたのそのまま無効にしておく。
 
 今度は[このサイト](http://omulettekobo.hatenablog.com/entry/2013/10/04/112836
-)を見て、割り当てCPU数はは元々1つだったので、「(1)IO APICを有効化のチェックを外す」、「(3) ネステッドページングを有効化のチェックを外す」を試してみたけど、これも関係なかった。
+)を見て、割り当てCPU数は元々1つだったので、「(1)IO APICを有効化のチェックを外す」、「(3) ネステッドページングを有効化のチェックを外す」を試してみたけど、これも関係なかった。
 
 {{% img src="images/vboxheadless-cpu-usage/ioapic.png" w="800" h="590" %}}
 {{% img src="images/vboxheadless-cpu-usage/nestedpaging.png" w="800" h="590" %}}

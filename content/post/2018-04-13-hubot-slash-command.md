@@ -13,7 +13,7 @@ https://www.npmjs.com/package/hubot-slash-command
 ## どんなもの?
 
 Slash Commandsに渡した引数をHobotに横流します。  
-例えば`/bot ping`と実行すると`<ボットの名前> ping`と話かけたのと同じ結果を得られます。
+例えば`/bot ping`を実行すると`<ボットの名前> ping`のように話かけたのと同じ結果を得られます。
 
 {{% img src="images/hubot-slash-command/example.png" w="516" h="216" %}}
 
@@ -34,14 +34,14 @@ Hubot内臓のexpressでスラッシュコマンドを受け付けています�
 - 雰囲気的にパブリックに切り替えにくいし、そもそもプライベートチャンネルをパブリックに切り替える機能もない
 - Botユーザを使うタイプのHubotアダプターの [hubot-matteruser](https://github.com/loafoe/hubot-matteruser/)が使えれば色々解決できそうなんですが、GitLabとのSSOに対応していない、BotだけにSSOを介さないログインを許可することが出来ない。
 
-Slash Commandsを受けつけるAPIを実装して、Incoming Webhooksで結果を返せば何でも作れるのですが、
+Slash Commandsを受けつけるAPIを実装してIncoming Webhooksで結果を返せば何でも作れるのですが、
 色々公開されているHubotスクリプトが使えないので、Slash Commandsの引数をそのままHubotへ連携するスクリプトを作成しました。
 （[hubot-schedule](https://github.com/matsukaz/hubot-schedule)とか使いたかった）
 
 ## 設定方法
 
 Slackでも使えるので、試しにSlackとHerokuに設定しています。  
-（Slack公式のHubot連携があるので実際Slackで使いたい場面はないかもしれませんが）
+（Slack公式のHubot連携があるので実際Slackで使いたい場面はない気もしますが）
 
 
 ### Hubotの設定
@@ -49,7 +49,7 @@ Slackでも使えるので、試しにSlackとHerokuに設定しています。
 アダプターは[hubot-mattermost](https://www.npmjs.com/package/hubot-mattermost)を指定して下さい。
 （Mattermost用のアダプターですがSlackでも動きます）
 
-Herokuにデプロイするのに必要なProcfileは自動的に追加されています。
+Herokuへデプロイするのに必要なProcfileは自動的に追加されています。
 
 ```
 web: bin/hubot -a mattermost

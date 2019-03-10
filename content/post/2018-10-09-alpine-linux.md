@@ -64,7 +64,7 @@ lrwxrwxrwx    1 root     root          12 Sep 11 20:23 cat -> /bin/busybox
 （以下省略）
 ```
 
-busyboxに引数としてコマンドを実行してもOK。やんないけど
+busyboxに引数としてコマンドを実行してもOK。やんないけど。
 
 ```
 / # /bin/busybox ps
@@ -75,7 +75,7 @@ PID   USER     TIME  COMMAND
 
 ヘルプを見ると使えるコマンドが見れます。基本的なコマンドは揃っている感じ...  
 あれvi入っている...  
-vi使えないコンテナ多いと思うんだけど...他の何かと勘違いしていたようだ、まあ良いか。
+vi使えないコンテナ多いと思ったんだけど...他の何かと勘違いしていたようだ、まあ良いか。
 
 ```
 / # /bin/busybox --help
@@ -128,7 +128,7 @@ v3.8.1-23-ga2d8d72222 [http://dl-cdn.alpinelinux.org/alpine/v3.8/community]
 OK: 9539 distinct packages available
 ```
 
-`apk add`でインストールします
+`apk add`でインストールします。
 
 ```
 / # apk add tree
@@ -140,7 +140,7 @@ OK: 5 MiB in 14 packages
 -rwxr-xr-x    1 root     root         85808 May  1 15:28 /usr/bin/tree
 ```
 
-`apk del` でアンインストール
+`apk del` でアンインストール。
 
 ```
 / # apk del tree

@@ -8,7 +8,7 @@ title = "GitHub Pagesを独自ドメインで公開する"
 
 ## モチベーション
 
-長いことエンジニアをしていますが、独自ドメインの取得やDNSの設定など実際にやったことがなかったので、そこらへんの知識を得るため GitHub Pagesで公開したブログに独自ドメインを設定してみました。
+長いことエンジニアをしていますが、独自ドメインの取得やDNSの設定など実際にやったことがありませんでした。そこらへんの知識を得るため GitHub Pagesで公開したブログに独自ドメインを設定してみました。
 
 GitHubのHelpを見ながら設定していきます。
 
@@ -18,9 +18,9 @@ GitHubのHelpを見ながら設定していきます。
 
 まず、お名前.comで `gyoza.beer` ドメインを取得しました。  
 beerドメインに一目惚れしてしまい、beerに合うものと考えたところgyoza.beerに決定w  
-初年も更新も確か2,980円と、決して安くはないけどバカ高くもないでまあ良しとします。
+初年も、更新も確か2,980円と決して安くはないけどバカ高くもないでまあ良しとします。
 
-他の用途でも使いたくなるかもしれないので、 `blog.gyoza.beer` というサブドメインをGitHub Pagesに割り当てることにします。  
+他の用途でも使いたくなる可能性もあるので、 `blog.gyoza.beer` というサブドメインをGitHub Pagesへ割り当てることにします。  
 なので、この先はCustom Subdomainの設定手順に従って進めます。
 
 https://help.github.com/articles/setting-up-a-custom-subdomain/
@@ -36,7 +36,7 @@ GitHub Pagesで公開しているリポジトリのSettingsからCustom Domain�
 
 https://help.github.com/articles/troubleshooting-custom-domains/#cname-already-taken
 
-確かに、私はファイルを置いてませんが問題なくアクセスできていて不思議に思っていましたが、後からcurlを叩いてみたところCNAMEファイルが置かれていました。
+確かに、私はファイルを置いていないのに問題なくアクセスできていて不思議に思っていましたが、後からcurlを叩いてみたところCNAMEファイルが置かれていました。
 
 ```
 $ curl http://blog.gyoza.beer/CNAME
@@ -88,4 +88,4 @@ If you have any questions you can contact us by replying to this email.
 
 ## さいごに
 
-仕事ではDNSを触ることはまず無いので、プライベートで触れておくことは重要だなと思いました。次はhttps化していきたいと思います。
+仕事ではDNSを触ることはまず無いので、プライベートで触れておくことは重要だなと思いました。次はhttps化していきたいです。

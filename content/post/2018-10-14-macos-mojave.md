@@ -7,7 +7,7 @@ title = "ちょっと古めのMacBook Air に macOS Mojaveをインストール�
 description = "MacBook Air 2013 に macOS Mojaveをインストールした記録と、新機能についての所感"
 +++
 
-詳しく調べてないけど、そんな悪い評判も聞かないので High Sierraから、パワーに満ちたシンプル macOS Mojaveにアップデートしてみました。  
+詳しく調べてないけど、そんな悪い評判も聞かないので High Sierraから、パワーに満ちたシンプル macOS Mojaveへアップデートしてみました。
 
 ## 動作環境
 
@@ -25,7 +25,7 @@ MacBook Air(mid 2013)
 
 ### iTerm2 のフォントが汚い
 
-画像だとよく分からないかもしれないけど、ぱっと見で分かるぐらいWindowsのフォントのようにギザギザして汚くなってしまいました。  
+画像だとよく分からないですが、ぱっと見で分かるぐらいWindowsのフォントのようにギザギザして汚くなってしまいました。
 
 {{% img src="images/macos-mojave/iterm2-before.png" w="653" h="443" %}}
 
@@ -34,28 +34,28 @@ MacBook Air(mid 2013)
   feature, text would be very hard to read.
 
 元々、iTerm2 は3.2.2が入っていましたが、  
-3.2.3のリリースノートに上記の記述があり、単純にバージョンアップしただけで綺麗になりました
+3.2.3のリリースノートに上記の記述があり単純にバージョンアップしただけで綺麗になりました。
 
 {{% img src="images/macos-mojave/iterm2-after.png" w="653" h="443" %}}
 
 ### OSレベルでフォントが汚くなった
 
 iTerm2は綺麗になりましたが、根本的にOSレベルで
-フォントのサブピクセル・アンチエイリアス処理が変更されカラーフリンジがなくなったことで、非Retinaディスプレイではフォントが汚く表示されるようになったそうです。  
-うちの場合はMac本体が非Retinaですが、外部ディスプレイに繋ぐケースもあるので多くの人に影響ある修正ではと思います。  
+フォントのサブピクセル・アンチエイリアス処理が変更され、カラーフリンジがなくなったことで非Retinaディスプレイではフォントが汚く表示されるようになったそうです。  
+うちの場合はMac本体が非Retinaですが、外部ディスプレイに繋ぐケースもあるので多くの人に影響ある修正でしょう。  
 ただ、コマンドラインで下記を実行して一度ログアウトすることで廃止されたカラーフリンジ・エフェクトを復活させることができるそうです。
 
 ```
 $ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 ```
 
-またアンチエイリアシングの強度を変えれるようで、「AppleFontSmoothing」を「3」と最強に変更しました。これもターミナルで実行し、ログアウトしログインすると反映されます。
+またアンチエイリアシングの強度を変えられるようで、「AppleFontSmoothing」を「3」と最強に変更しました。これもターミナルで実行し、ログアウトしログインすると反映されます。
 
 ```
 $ defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
 ```
 
-ただ、微妙な差はよく分かってないかも。
+ただ、微妙な差はよく分かっていない可能性がありますが。
 
 [参考]
 https://gori.me/mac/mac-tips/110780
@@ -69,7 +69,7 @@ https://gori.me/mac/mac-tips/110780
 
 ## vimの起動でエラー
 
-(2018/10/16 追記) vimの起動時にpowerlineでエラーが出ることに気づいたので対応しました
+(2018/10/16 追記) vimの起動時にpowerlineでエラーが出ることに気づいたので対応しました。
 
 ```
 $ vi
@@ -91,7 +91,7 @@ Unable to import powerline, is it installed?
 Press ENTER or type command to continue
 ```
 
-まず、自分はappleがビルドしたOS標準のvimを使ってましたが、Mojaveにしたことで更新されたようです。root@apple.com強そう
+まず、自分はappleがビルドしたOS標準のvimを使ってましたが、Mojaveにしたことで更新されたようです。root@apple.com強そう。
 
 ```
 $ vim --version
@@ -102,7 +102,7 @@ Compiled by root@apple.com
 
 python2でエラーになっていますが、そんなエラーよく分からんので既存の環境はサクッと捨てて
 Homebrewでpython3と、vimをインストールします  
-vimは `--with-override-system-vi` オプションで付きでインストールして、brewで入れた方を使うようにします。これでエラーが出なくなりました
+vimは `--with-override-system-vi` オプション付きでインストールしてbrewで入れた方を使うようにします。これでエラーが出なくなりました。
 
 ```
 $ brew install python
@@ -133,7 +133,7 @@ VirtualBox 5.1.10はMojaveに対応していないようです。
 
 {{% img src="images/macos-mojave/virtualbox2.png" w="532" h="269" %}}
 
-[こちらの記事](https://qiita.com/kai_kou/items/4f554a515ea7926702df)を見ると、VirtualBoxをバージョンアップすれば良いようなので 5.2に上げましたが、こんどはVagrant 1.9.4がVirtualBox5.1までしか対応してませんでした。 
+[こちらの記事](https://qiita.com/kai_kou/items/4f554a515ea7926702df)を見ると、VirtualBoxをバージョンアップすれば良いようなので 5.2に上げましたが、こんどはVagrant 1.9.4がVirtualBox5.1までしか対応してませんでした。
 
 ```
 $ vagrant up
@@ -193,7 +193,7 @@ Updated 'vagrant-vbguest' to version '0.16.0'!
 背景が暗くなるだけっちゃだけ。とりあえず設定してみたけど、Apple純正のアプリ以外でダークになるものが少ない印象。とにかく黒い画面が好きな人向け
 
 - [スタック](https://help.apple.com/macOS/mojave/whats-new/?lang=ja&cases=kIFAGHvXTAepRptQXiXe5w,N0bfKOvERSiAp06mHOcgOQ#stacks)  
-ファイルの種類やファイル更新日やタグなどでデスクトップのファイルをまとめてくれる機能。  
+ファイルの種類やファイル更新日、タグなどでデスクトップのファイルをまとめてくれる機能。  
 種類はともかく、日付でまとめて便利なイメージがあまり湧かないしタグでまとめるぐらいならフォルダ切るかな
 
 - [クイックルック](https://help.apple.com/macOS/mojave/whats-new/?lang=ja&cases=kIFAGHvXTAepRptQXiXe5w,N0bfKOvERSiAp06mHOcgOQ#quick-look)  
@@ -226,4 +226,4 @@ Updated 'vagrant-vbguest' to version '0.16.0'!
 ## おわりに
 
 今回、私個人の環境は割とスムーズに移行できました。
-クイックルックとスクリーンショットは便利そうなので会社のMacも早く移行したい
+クイックルックとスクリーンショットは便利そうなので会社のMacも早く移行したい。

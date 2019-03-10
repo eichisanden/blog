@@ -22,7 +22,7 @@ toc = true
 
 ## Let's EncryptでSSL/TLS証明書を設定する
 
-Let's Encryptをダウンロードして証明書を発行していきます。  
+Let's Encryptをダウンロードして証明書を発行していきます。
 
 ```
 $ git clone https://github.com/letsencrypt/letsencrypt
@@ -64,7 +64,7 @@ $ sudo cat /etc/letsencrypt/live/gyoza.beer/privkey.pem | pbcopy
 # .gitlab-ci.ymlの設定
 
 [Gitlab PagesのHugoのサンプルプロジェクト](https://gitlab.com/pages/hugo)の.gitlab-ci.ymlを参考に作成します。  
-先ほど証明書生成時にのログに出てきたacme-challengeのファイルを作成して、public下の所定のフォルダにコピーするようにしてみました。  
+先ほど証明書生成時にのログに出てきたacme-challengeのファイルを作成して、public下の所定のフォルダへコピーするようにしてみました。
 
 ```yml
 image: alpine

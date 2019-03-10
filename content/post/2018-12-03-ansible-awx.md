@@ -10,7 +10,7 @@ description = "Ansible AWXのインストールから基本的な実行まで試
 ## Ansible AWXとは？
 
 エンタプライズ向けの位置付けであるAnsible Towerのアップストリーム版という位置付け。  
-Web上でプレイブックを管理したり実行したり、APIでアクセスしたりを提供してくれる。
+Web上でプレイブックを管理・実行したり、APIでアクセスしたりを提供してくれる。
 
 - Ansible AWX  
 https://github.com/ansible/awx
@@ -26,7 +26,7 @@ Apache v2
 - いつ誰が何を実行したか分かるようにしたい（可視化）
 - 実行されては困るものは権限で制御したい
 
-ここらへんをJenkinsを使う場合よりスマートに解決できるのではと思い試してみました
+ここらへんをJenkinsを使う場合よりスマートに解決できるのではと思い試してみました。
 
 ## 試した環境
 
@@ -38,9 +38,10 @@ Apache v2
 
 ## インストール
 
-CentOS7.5にdockerでインストールしてみました
+CentOS7.5にdockerでインストールしてみました。
 
-まずAnsibleをインストールします
+まずAnsibleをインストールします。
+
 ```
 $ sudo yum install -y epel-release
 $ sudo yum install -y ansible
@@ -77,20 +78,20 @@ $ ansible-playbook -i inventory --become --become-pass install.yml
 
 {{% img src="images/ansible-awx/login.png" w="500" h="391" %}}
 
-ログインするとダッシュボード画面に遷移します
+ログインするとダッシュボード画面に遷移します。
 
 {{% img src="images/ansible-awx/dashboard.png" w="800" h="388" %}}
 
 ## Organizationの登録
 
-まずOrganizationを登録します。こだわりなければDefaultというのが登録されているのでそれを使っても良いのかもしれません。  
-ちなみに、全体的にこんな感じに上下に分割されている独自なUIなんですが私は馴染めずに使いにくいと感じました。
+まずOrganizationを登録します。こだわりなければDefaultというのが登録されているのでそれを使っても良い。  
+ちなみに、全体的にこんな感じで上下に分割されている独自なUIなんですが私は馴染めずに使いにくいと感じました。
 
 {{% img src="images/ansible-awx/organization.png" w="800" h="388" %}}
 
 ## Teamの登録
 
-Organizationの下にTeamを登録可能
+Organizationの下にTeamを登録可能。
 
 {{% img src="images/ansible-awx/team.png" w="800" h="388" %}}
 
@@ -114,7 +115,7 @@ Inventryを作成します。テストとしてホストを1つ登録しまし�
 ## Templateの登録
 
 現在のバージョンは日本語処理にバグがあり、Credentialの選択でエラーになります。  
-将来的に直ると思いますが、ブラウザの言語設定で英語に変更して英語表示に切り替えることで回避できます。
+将来的に直るでしょうが、ブラウザの言語設定で英語に変更して英語表示に切り替えることで回避できます。
 
 {{% img src="images/ansible-awx/credential_error.png" w="500" h="377" %}}
 
@@ -130,6 +131,6 @@ Template画面のロケットアイコンで実行できます
 
 ## まとめ
 今後、Dynamic Inventory、複数のPlaybookでワークフローを組む機能など応用的な機能も触ってみたい。
-ただ、日本語の処理にバグがあったり発展途上な印象なので引き続き評価していこうと思います。
+ただ、日本語の処理にバグがあったり発展途上な印象なので引き続き評価していきたい。
 
 
