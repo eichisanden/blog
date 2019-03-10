@@ -91,7 +91,7 @@
     // 不自然なアルファベットを検知する
     "ja-unnatural-alphabet": true,
     // 常用漢字を使っているか
-    "joyo-kanji": true,
+    "joyo-kanji": false,
     // 連用中止法を検知する
     "no-renyo-chushi": true,
     // 全角文字と半角英字の間に半角スペース、ただし次の全角文字 [、。「 」（）｛｝【】『』] の前後には不要
