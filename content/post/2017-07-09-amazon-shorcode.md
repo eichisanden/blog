@@ -9,9 +9,9 @@ title = "HugoのShortcodesを自作してみる"
 
 Hugoでは、Markdownで書けないことはHTMLを直接書くわけですが、Shortcodesというテンプレート化する仕組みがあります。
 
-https://gohugo.io/extras/shortcodes/
+https://gohugo.io/content-management/shortcodes/
 
-TwitterやYoutubeの埋め込みはビルドインのもので出来るのですが、Amazonにリンク貼るものがなかったので自作してみました。
+TwitterやYouTubeの埋め込みはビルドインのもので出来るのですが、Amazonにリンク貼るものがなかったので自作してみました。
 
 ## 完成イメージ
 
@@ -62,7 +62,7 @@ AmazonのアソシエイトIDはconfig.tomlに追加したので`{{ .Site.Params
 
 私が使用しているRobustテーマはampに対応しているので、AMP用の`layouts/shortcodes/amazon.amp.html`も作成します。  
 世の中のAmazonリンク生成ツールはAMPに対応していないようなので、今回ShortCodeを作ろうと思った次第です。  
-AMPでは`img`タグは使えないので、代わりに`amp-image`タグを使用します。  
+AMPでは`img`タグは使えないので、代わりに`amp-image`タグを使用します。
 
 ```html
 <div class="amazon-box">

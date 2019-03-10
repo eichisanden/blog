@@ -49,7 +49,7 @@ iTerm2は綺麗になりましたが、根本的にOSレベルで
 $ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 ```
 
-またアンチエイリアシングの強度を変えられるようで、「AppleFontSmoothing」を「3」と最強に変更しました。これもターミナルで実行してログアウトしログインすると反映されます。
+またアンチエイリアシングの強度を変えられるようで、「AppleFontSmoothing」を「3」と最大に変更しました。これもターミナルで実行してログアウトしログインすると反映されます。
 
 ```
 $ defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
@@ -120,8 +120,8 @@ Compiled by Homebrew
 ```
 
 [参考]  
-https://github.com/powerline/powerline/issues/1947　　
-https://qiita.com/owlbeck/items/2df2ab50eedd32011ffd
+- https://github.com/powerline/powerline/issues/1947
+- https://qiita.com/owlbeck/items/2df2ab50eedd32011ffd
 
 ## Virtual Boxが無効になっている
 

@@ -10,7 +10,7 @@ description = ""
 先週、Minikubeを使ってローカル開発環境を作ったが、Docker for Macにはk8が同梱されているようなので試してみました。
 
 ## 実行環境
-MacOS High Sierra(10.13.6)  
+Mac OS High Sierra(10.13.6)  
 Docker: 18.06.1  
 Kubernetes: 1.10.3
 
@@ -93,7 +93,7 @@ service/hello-node exposed
 ```
 
 Minikubeのときは `minikube service hello-node` でブラウザを開きました。
-どうするんだろう？と一瞬悩みましたが、直接`http://localhost:8080/`で何事もなく開けました。
+どうするんだろうと一瞬悩みましたが、直接`http://localhost:8080/`で何事もなく開けました。
 
 {{% img src="images/docker4mac-k8s/application.png" w="656" h="384" %}}
 

@@ -13,7 +13,7 @@ description = "新しいMacbook Airを買ったのでの環境構築をAnsible�
 
 ## 環境
 
-- MacOS 10.14.1 Mojave
+- Mac OS 10.14.1 Mojave
 - Homebrew 1.8.2
 - Ansible 2.7.1
 - mas 1.4.3
@@ -21,7 +21,7 @@ description = "新しいMacbook Airを買ったのでの環境構築をAnsible�
 ## Homebrew のインストール
 
 まずはHomebrewを入れないことには始まりませんので[公式サイト](https://brew.sh/index_ja)の手順に従ってインストールしましょう。
-（そういえば、この時点でXCodeを全く意識してなかったけどすんなり通ってしまった...何か変わったのかな..）
+（そういえば、この時点でXcodeを全く意識してなかったけどすんなり通ってしまった...何か変わったのかな..）
 
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -45,7 +45,7 @@ $ brew install ansible
 
 ## AnsibleでPlaybookを作っていく
 
-ここからansible-playbookで自動化するため、適当なフォルダを作って作業していきます。  
+ここからansible-playbookで自動化するため、適当なフォルダを作って作業していきます。
 
 ### Inventry
 
@@ -71,7 +71,7 @@ echo localhost > hosts
 
 ### Homebrew-caskパッケージのインストール
 
-[homebrew_caskモジュール](https://docs.ansible.com/ansible/2.5/modules/homebrew_cask_module.html)で MacOSアプリをインストールしていきます。
+[homebrew_caskモジュール](https://docs.ansible.com/ansible/2.5/modules/homebrew_cask_module.html)でMac OSアプリをインストールしていきます。
 コード自体特筆することは特にありませんが、これ全部サイト回ってインストールしてくのは大変なのですごい楽です。
 
 ```yml
@@ -154,7 +154,7 @@ statで`~/.oh-my-zsh/`を存在チェックした結果を変数に格納して�
 
 ### MasでCaskでインストールできないアプリをインストールする
 
-XCodeなどHomebrew-caskでインストールできないアプリを[mas(Mac App Store command line interface)](https://github.com/mas-cli/mas)でインストールしていきます。このmasの存在は今回初めて知りました。
+XcodeなどHomebrew-caskでインストールできないアプリを[mas(Mac App Store command line interface)](https://github.com/mas-cli/mas)でインストールしていきます。このmasの存在は今回初めて知りました。
 この部分はansible-garaxyで公開されている[ansible-role-mas](https://github.com/geerlingguy/ansible-role-mas)というRoleを使わせてもらいました。
 
 
@@ -176,7 +176,7 @@ $ ansible-galaxy install -p roles -r requirements.yml
 ```
 
 次に、masでインストールするためにはアプリのIDが必要ですので、古い方のMacで `mas list` してインストールされているアプリのIDを調べます。
-今回はXCodeをインストールしたいのでIDを控えておきます。
+今回はXcodeをインストールしたいのでIDを控えておきます。
 
 ```
 $ mas list
@@ -188,7 +188,7 @@ $ mas list
 409203825 Numbers (5.3)
 ```
 
-playbook.ymlに戻って、先ほど取得したRoleで必要な`mas_installed_apps`変数にXCodeを定義します。この変数にセットしておくとインストールしてくれる仕組みです。
+playbook.ymlに戻って、先ほど取得したRoleで必要な`mas_installed_apps`変数にXcodeを定義します。この変数にセットしておくとインストールしてくれる仕組みです。
 
 ```yml
   vars:
@@ -197,7 +197,7 @@ playbook.ymlに戻って、先ほど取得したRoleで必要な`mas_installed_a
       - { id: 497799835, name: "Xcode (10.1)" }
 ```
 
-あとはrolesに `geerlingguy.mas` を定義します。Playbookを実行するとRoleが実行されてXCodeがインストールされます。
+あとはrolesに `geerlingguy.mas` を定義します。Playbookを実行するとRoleが実行されてXcodeがインストールされます。
 （tasksとrolesを同時に使ってるのはイマイチな気がするけど）
 
 ```yml
@@ -241,7 +241,7 @@ roleを下記のように定義します。実行すると、指定したフォ�
     - geerlingguy.dotfiles
 ```
 
-### MacOSの環境設定
+### Mac OSの環境設定
 
 DockやFinderの設定なども自動化してみました。
 標準の`osx_defaults`モジュールのdefaultsコマンドで変更できることが設定可能です。
@@ -275,8 +275,8 @@ DockやFinderの設定なども自動化してみました。
         - { domain: com.apple.menuextra.battery, key: ShowPercent, type: string, value: "YES" }
 ```
 
-＜参考＞  
-- [Macの環境構築をAnsibleに任せる](システム環境設定)https://qiita.com/itkr/items/8a3fcab6ed76052d8337)  
+### 参考 
+- [Macの環境構築をAnsibleに任せる](https://qiita.com/itkr/items/8a3fcab6ed76052d8337)  
 - [ターミナルから Mac を設定する（defaults write コマンド等）](https://qiita.com/djmonta/items/17531dde1e82d9786816)  
 - [osx_defaults_module](https://docs.ansible.com/ansible/2.5/modules/osx_defaults_module.html)  
 
@@ -284,11 +284,11 @@ DockやFinderの設定なども自動化してみました。
 
 なんでも自動化すれば良いものではないのでやりすぎは注意ですが、まだ完成していないのでちまちま直してくつもりです。
 あと、あまりAnsibleに詳しくない自分にとって練習の題材には良かったです。あとは何年か後にMacを買い換えた俺がこのエントリを思い出して喜んでくれたら幸いです。
-あと、作ったものはgithubに置いてあります。
+あと、作ったものはGitHubに置いてあります。
 https://github.com/eichisanden/mackbook-playbook
 
-＜参考＞  
-- [Mac の開発環境構築を自動化する (2015 年初旬編)](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)  
+### 参考
+- [Mac の開発環境構築を自動化する (2015 年初旬編)](https://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)  
 - [Macの環境構築をAnsibleに任せる](https://qiita.com/itkr/items/82ddb1902b0051940526)  
 - [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)  
 - [Macの環境構築をAnsibleでやることにした](https://joe-re.hatenablog.com/entry/2015/01/02/212007)  

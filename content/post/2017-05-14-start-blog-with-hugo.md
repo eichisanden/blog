@@ -26,13 +26,13 @@ thumbnail = "images/start-blog-with-hugo/hugo.png"
 HugoはGoで書かれているため公開されたバイナリを実行するだけで良くて、RubyやNodeの環境準備が不要なのもアドバンテージです。  
 サイトをざっと見た感じ、とりあえず一通りのことは出来そうです。
 
-- Themes http://themes.gohugo.io/
+- Themes https://themes.gohugo.io/
 
 使いたいテーマがないと困るので、先にテーマを探しておきます。  
 テーマの数はそれほど多くない印象です。  
 探したところ、はてブにも対応したRobustというクールなテーマがあったので使用させていただきました。
 
-- Robust http://themes.gohugo.io/robust/
+- Robust https://github.com/dim0627/hugo_theme_robust
 
 ## セットアップ
 

@@ -19,7 +19,7 @@ Docker Hubで公開されているイメージは、容量を減らすため軽�
 $ docker image pull alpine:3.8
 ```
 
-容量はたったの4.41MBでした！この容量でLinuxが動くんだからすごいです。
+容量はたったの4.41MBでした。この容量でLinuxが動くんだからすごいです。
 
 ```
 $ docker image ls|grep alpine

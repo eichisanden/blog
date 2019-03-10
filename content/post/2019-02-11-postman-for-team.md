@@ -19,7 +19,7 @@ https://learning.getpostman.com/
 
 ## curlコマンドをインポートしてRequest設定を作る
 
-Import->Paste Raw Textに、curlコマンドをコピペすることでRequest設定が作成出来るようです。  
+Import->Paste Raw Textに、curlコマンドをコピー&ペーストすることでRequest設定が作成出来るようです。  
 試しに先週紹介したjsonplaceholderのAPIを叩くcurlコマンドを貼り付けてみます。  
 （ちなみに、レスポンスヘッダーを出力する-iオプションが付いているとエラーになるので注意してください）
 

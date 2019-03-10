@@ -23,7 +23,7 @@ description = "【2018年12月】Cloud Native時代のコンテナ基盤構築�
 
 https://www.cncf.io/
 
-主要なクラウドベンダーが参加する団体「CNCF」（Cloud Native Computing Foundation）が提唱している概念。
+「CNCF」（Cloud Native Computing Foundation）が提唱している概念。
 従来のオンプレからクラウドへ移行していたシステムに対して、最初からクラウド前提でデザインされたシステムのことをそう呼ぶそうです。
 
 ### Cloud Native Trail Map
@@ -82,7 +82,7 @@ CLIでKubernetes環境を構築していきます
 
 {{% img src="images/k8s-handson/map.png" w="800" h="415" %}}
 
-ハマりどころはないはずですが、VPCルータの設定を変える時に変更→反映と2回ボタンを押す必要があるのに反映ボタンを押し忘れたぐらいです。3台セットアップするのは、まあまあ面倒くさいです。
+ハマりどころはないはずですが、VPCルータの設定を変える時に変更→反映と2回ボタンを押す必要があるのに反映ボタンを押し忘れたぐらいです。3台セットアップするのは、まあ面倒くさいです。
 
 ## Rancher編
 
@@ -114,7 +114,7 @@ docker run -d --restart=unless-stopped \
 
 {{% img src="images/k8s-handson/top.png" w="800" h="405" %}}
 
-ノード名のプリフィックス、ノード数、テンプレート（sakura-default-template固定）などを指定してクラスタを追加します
+ノード名のプレフィックス、ノード数、テンプレート（sakura-default-template固定）などを指定してクラスタを追加します
 （テンプレート本体は[ui-driver-sakuracloud](https://sacloud.github.io/ui-driver-sakuracloud/)なようです）
 
 {{% img src="images/k8s-handson/setup.png" w="800" h="416" %}}

@@ -106,9 +106,11 @@
     "no-dead-link": {
       "checkRelative": true,
       "baseURI": null,
-      "ignore": [],
+      "ignore": ["http://localhost*"],
       "preferGET": [],
       "ignoreRedirects": false
-    }
+    },
+    // Tech Wordのスペルチェック
+    "spellcheck-tech-word": true
   }
 }

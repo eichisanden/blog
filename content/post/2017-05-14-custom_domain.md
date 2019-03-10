@@ -12,7 +12,7 @@ title = "GitHub Pagesを独自ドメインで公開する"
 
 GitHubのHelpを見ながら設定していきます。
 
-- https://help.github.com/articles/using-a-custom-domain-with-github-pages/
+- https://help.github.com/en/articles/using-a-custom-domain-with-github-pages
 
 ## ドメインを取得する
 
@@ -23,7 +23,7 @@ beerドメインに一目惚れしてしまい、beerに合うものと考えた
 他の用途でも使いたくなる可能性もあるので、 `blog.gyoza.beer` というサブドメインをGitHub Pagesへ割り当てることにします。  
 なので、この先はCustom Subdomainの設定手順に従って進めます。
 
-https://help.github.com/articles/setting-up-a-custom-subdomain/
+https://help.github.com/en/articles/setting-up-a-custom-subdomain
 
 ## GitHub にドメインを設定する
 
@@ -34,7 +34,7 @@ GitHub Pagesで公開しているリポジトリのSettingsからCustom Domain�
 
 ネットで色々調べてると、CNAMEファイルを手動で追加する手順が出てきますが、Helpによるとこの設定をした時点で自動的にCNAMEファイルが生成されるようでした。
 
-https://help.github.com/articles/troubleshooting-custom-domains/#cname-already-taken
+https://help.github.com/en/articles/troubleshooting-custom-domains#cname-already-taken
 
 確かに、私はファイルを置いていないのに問題なくアクセスできていて不思議に思っていましたが、後からcurlを叩いてみたところCNAMEファイルが置かれていました。
 

@@ -68,7 +68,7 @@ $ npm i hubot-slash-command --save
 ["hubot-slash-command"]
 ```
 
-(4) git push heroku masterしておきます。
+(4) `git push heroku master`しておきます。
 
 ### Outgoing Webhooksの設定
 
