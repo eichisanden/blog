@@ -30,7 +30,7 @@ Googleアカウントでログインできるので今回はこちらで試し�
 
 {{% img src="images/postman-for-team/4.png" w="800" h="524" %}}
 
-ログインすると、Workspaceが切り替えられるようになりました。Create Newから新しいWorkspaceを作ることも可能ですが、今回はデフォルトで作成されている Team Workspaceを使ってみます。
+ログインすると、Workspaceが切り替えられるようになりました。Create Newから新しいWorkspaceを作ることも可能ですが、今回はデフォルトで作成されているTeam Workspaceを使ってみます。
 
 {{% img src="images/postman-for-team/5.png" w="400" h="402" %}}
 

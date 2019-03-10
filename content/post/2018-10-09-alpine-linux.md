@@ -34,7 +34,7 @@ $ docker container run -it alpine:3.8
 ```
 
 デフォルトではbashは入ってなくて、ashが動いているようです。  
-仕事でもbashに依存するようなシェルは書いてない気がするので問題ない気がします。  
+仕事でもbashに依存するようなシェルは書いてない気がするので問題ない気がします。
 
 ```
 / # cat /etc/shells
@@ -117,7 +117,7 @@ Currently defined functions:
 
 ## apkでパッケージ管理
 
-apkコマンドで足りないパッケージはダウンロードできます。まず`apk update`で最新化.
+apkコマンドで足りないパッケージはダウンロードできます。まず`apk update`で最新化。
 
 ```
 / # apk update

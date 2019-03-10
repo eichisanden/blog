@@ -46,7 +46,7 @@ Slackでも使えるので、試しにSlackとHerokuに設定しています。
 
 ### Hubotの設定
 (1) [公式サイト](https://hubot.github.com/docs/)に従ってHubotプロジェクトを作成します。
-アダプターは[hubot-mattermost](https://www.npmjs.com/package/hubot-mattermost)を指定して下さい。
+アダプターは[hubot-mattermost](https://www.npmjs.com/package/hubot-mattermost)を指定してください。
 （Mattermost用のアダプターですがSlackでも動きます）
 
 Herokuへデプロイするのに必要なProcfileは自動的に追加されています。
@@ -56,7 +56,7 @@ web: bin/hubot -a mattermost
 ```
 
 
-(2) hubot-slash-commandをインストールします
+(2) hubot-slash-commandをインストールします。
 
 ```
 $ npm i hubot-slash-command --save
@@ -68,7 +68,7 @@ $ npm i hubot-slash-command --save
 ["hubot-slash-command"]
 ```
 
-(4) git push heroku masterしておきます
+(4) git push heroku masterしておきます。
 
 ### Outgoing Webhooksの設定
 
@@ -78,11 +78,11 @@ TokenはあとでHerokuに設定するのでコピーしておいてください
 ### Herokuに環境変数を設定
 
 hubot-mattermostとhubot-slash-commandに必要なパラメータを設定しましょう。
-hubot-slash-commandの`HUBOT_SLASH_COMMAND_TOKENS`は必須なので先ほどコピーしたToknenを設定して下さい。
+hubot-slash-commandの`HUBOT_SLASH_COMMAND_TOKENS`は必須なので先ほどコピーしたToknenを設定してください。
 
 {{% img src="images/hubot-slash-command/config_vars.png" w="702" h="459" %}}
 
 以上で設定完了となります。
 
-ChatOpsする基盤が出来たので次は出来ることを充実させていこうと思います。
+ChatOpsする基盤が出来たので次は出来ることを充実させていきます。
 

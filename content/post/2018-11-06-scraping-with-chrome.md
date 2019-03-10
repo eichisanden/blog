@@ -15,18 +15,18 @@ Command Line APIというjQueryライクなAPIをConsoleから叩くとNode情�
 下記の書き方で、必要なNodeが取得できるので、あとはmapなりforEachなりで回して必要な形でデータを取得します。
 
 - $(selector)  
-指定された CSS セレクターに一致する最初の要素を返します。  
+指定されたCSSセレクターに一致する最初の要素を返します。  
 document.querySelector() のショートカットです。  
 ただし、jQueryを使っているサイトではjQueryの$が優先されてしまうので、その場合は`$$(selector)[0]`で代用しましょう。
 
 - $$(selector)  
-指定された CSS セレクターに一致するすべての要素の配列を返します。 document.querySelectorAll() に近いですが戻り値がNodeListではなく、Arrayなので扱いやすいです。
+指定されたCSSセレクターに一致するすべての要素の配列を返します。 document.querySelectorAll() に近いですが戻り値がNodeListではなく、Arrayなので扱いやすいです。
 
 <参考>  
 https://developer.mozilla.org/ja/docs/Web/API/Document/querySelectorAll
 
 - $x(xpath)  
-指定された XPath に一致する要素の配列を返します。お好みでどうぞ。
+指定されたXPathに一致する要素の配列を返します。お好みでどうぞ。
 
 ## 試しに使ってみる
 

@@ -2,11 +2,11 @@
 thumbnail = "images/k8s-tutorial/dashboard.png"
 categories = ["技術メモ"]
 tags = ["Kubernetes", "Docker"]
-title = "知識ゼロで Kubernetes Tutorialをやってみた"
+title = "知識ゼロでKubernetes Tutorialをやってみた"
 date = "2018-09-25T20:37:07+09:00"
 +++
 
-最近めちゃくちゃ良く聞くようになり、知らないと話についてけないので調べてみました。  
+最近めちゃくちゃ良く聞くようになりましたが、知らないと話についてけないので調べてみました。  
 Webを見てるだけだと良く分からなかったので公式のTutorialをやってみることにしました。
 
 - Tutorials - Hello Minikube  
@@ -14,7 +14,7 @@ https://kubernetes.io/docs/tutorials/hello-minikube/
 
 
 Tutorialの内容は、Node.jsのHello worldアプリをDockerイメージに落としてK8sで動かすものです。
-k8sといってもMinikubeという簡易版を使ってローカルPCで動かすようですが。  
+k8sといってもMinikubeという簡易版を使ってローカルPCで動かすようですが。
 
 ## セットアップ
 
@@ -26,7 +26,7 @@ k8sといってもMinikubeという簡易版を使ってローカルPCで動か�
 $ brew cask install minikube
 ```
 
-続いて[手順](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)に従い、HyperKit driverをインストールします。
+続いて[手順](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)に従って、HyperKit driverをインストールします。
 
 
 最後にkubectlをインストールします。
@@ -122,7 +122,7 @@ CMD node server.js
 $ docker build -t hello-node:v1 .
 ```
 
-出来ました。`docker images`の一番上が今ビルドしたものですが、関連して沢山のimageが取得されていることが分かります。
+出来ました。`docker images`の一番上が今ビルドしたものですが、関連してたくさんのimageが取得されていることが分かります。
 
 ```
 $ docker images                                                                                                                            REPOSITORY                                 TAG                 IMAGE ID            CREATED             SIZE
@@ -255,7 +255,7 @@ Received request for URL: /favicon.ico
 
 ## サンプルアプリケーションのバージョンアップ
 
-今度はアプリのバージョンアップについて試して行きます。
+今度はアプリのバージョンアップについて試していきます。
 server.jsで表示しているメッセージを書き換えます。
 
 ```server.js
@@ -337,7 +337,7 @@ Machine deleted.
 ## おわりに
 
 - hyperkitが1.6GB、com.docker.hyperkitが1.5GBと、メモリ消費が激しいので私のMacBook Air 2013（メモリ4GB）では辛かった。
-  - MacBook Pro タッチバーなしメモリ沢山モデル、頼む出してくれ
+  - MacBook Proタッチバーなしメモリ沢山モデル、頼む出してくれ
 - クラウドで動くイメージだったけど開発環境はローカルで作れるみたい
   - ローカルと本番の環境差異が少なそうなので、それは良さげ
   - ただ、よく分からないエラーも発生したので実際に使う時つらいかも
@@ -346,8 +346,8 @@ Machine deleted.
 
 {{% amazon
   itemId="4297100339"
-  title="Docker/Kubernetes 実践コンテナ開発入門"
-  author="山田 明憲 (著)"
+  title="Docker/Kubernetes実践コンテナ開発入門"
+  author="山田明憲 (著)"
   publisher="技術評論社"
   imageUrl="https://images-fe.ssl-images-amazon.com/images/I/51d69eJQMyL._SL160_.jpg"
 %}}

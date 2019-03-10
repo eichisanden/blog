@@ -7,7 +7,7 @@ title = "Cloud Native時代のコンテナ基盤構築ハンズオン18.12 ～ K
 description = "【2018年12月】Cloud Native時代のコンテナ基盤構築ハンズオン18.12 ～ Kubernetes・Rancher on さくらのクラウド～に参加した話"
 +++
 
-先日、[【2018年12月】Cloud Native時代のコンテナ基盤構築ハンズオン18.12 ～ Kubernetes・Rancher on さくらのクラウド～](https://sakura-kanto.doorkeeper.jp/events/82838)に行ってきました
+先日、[【2018年12月】Cloud Native時代のコンテナ基盤構築ハンズオン18.12 ～ Kubernetes・Rancher on さくらのクラウド～](https://sakura-kanto.doorkeeper.jp/events/82838)に行ってきました。
 
 ## 概要
 
@@ -30,7 +30,7 @@ https://www.cncf.io/
 https://www.cncf.io/blog/2018/03/08/introducing-the-cloud-native-landscape-2-0-interactive-edition/
 
 CNCFが推奨するプロセスとして下記10ステップをあげています。
-殆どのステップをCNCFでカバーしている。
+ほとんどのステップをCNCFでカバーしている。
 
 1. コンテナ化  
 最初の段階として、スケールしやするためコンテナ化が必要。
@@ -78,22 +78,22 @@ Kubernates上で動くFWとして、IstioとSpinnakerがよく使われている
 ## Kubernetes環境構築編
 
 CLIでKubernetes環境を構築していきます  
-手順に従ってCoreOSのサーバを３台立ててブリッジに接続、VPCルータ経由でアクセスします
+手順に従ってCoreOSのサーバを３台立ててブリッジに接続、VPCルータ経由でアクセスします。
 
 {{% img src="images/k8s-handson/map.png" w="800" h="415" %}}
 
-ハマりどころはないはずですが、VPCルータの設定を変える時に変更→反映と2回ボタンを押す必要があるのですが、反映ボタンを押し忘れたぐらいです。3台セットアップするのは、まあまあ面倒くさいです。
+ハマりどころはないはずですが、VPCルータの設定を変える時に変更→反映と2回ボタンを押す必要があるのに反映ボタンを押し忘れたぐらいです。3台セットアップするのは、まあまあ面倒くさいです。
 
 ## Rancher編
 
-今度は[Racher](https://www.rancher.co.jp/)を使ったハンズオン
+今度は[Racher](https://www.rancher.co.jp/)を使ったハンズオン。
 
 CentOS7.5のサーバーを一台立てて、それ上でRancherを動かします  
-Rancherの設定は、予め用意されたスタートアップスクリプトでやってくれるので、特にやることはありません。
+Rancherの設定は、あらかじめ用意されたスタートアップスクリプトでやってくれるので特にやることはありません。
 
 {{% img src="images/k8s-handson/rancher2-setup.png" w="800" h="248" %}}
 
-スタートアップスクリプトの説明に使い方が書いてあります
+スタートアップスクリプトの説明に使い方が書いてあります。
 
 {{% img src="images/k8s-handson/rancher2-setup1.png" w="800" h="186" %}}
 
@@ -123,7 +123,7 @@ docker run -d --restart=unless-stopped \
 
 {{% img src="images/k8s-handson/dashboard.png" w="800" h="405" %}}
 
-今度はアプリを追加して行きます。Rancher公式のライブラリとデフォルトでは無効ですがHelmも使えるようです。
+今度はアプリを追加していきます。Rancher公式のライブラリとデフォルトでは無効ですがHelmも使えるようです。
 
 {{% img src="images/k8s-handson/catalog.png" w="800" h="416" %}}
 

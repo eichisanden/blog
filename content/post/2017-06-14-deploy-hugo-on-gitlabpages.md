@@ -10,7 +10,7 @@ toc = true
 
 # GitHub PagesからGitLab Pagesに移行してみた
 
-なぜだかCloud Flareで発行した証明書から自分のドメインが消えてしまうという謎の事象を解決できなかったのもあり、自前のSSL/TLS証明書を設定できるGitLab Pagesにブログを移行した。  
+なぜだかCloud Flareで発行した証明書から自分のドメインが消えてしまうという謎の事象を解決できなかったのもあって、自前のSSL/TLS証明書を設定できるGitLab Pagesにブログを移行した。  
 基本的な設定は置いておいて、独自ドメインの設定とSSL/TLS証明書の設定方法のメモ。
 
 ## DNSの設定
@@ -52,7 +52,7 @@ MVcYbRe68R9_hMc8hGGl1bGh3dOXP0qjYf9vO8D8M40.6w_jWE2mP9CxdvJca7dEsHUCF_JEu2f5uP3Z
 ```
 # GitLabにSSL/TLS証明書を設定
 
-発行された証明書をGitLab PagesのSettings->Pagesから設定します。  
+発行された証明書をGitLab PagesのSettings->Pagesから設定します。
 
 ```
 $ sudo cat /etc/letsencrypt/live/gyoza.beer/fullchain.pem | pbcopy

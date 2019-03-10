@@ -37,7 +37,7 @@ APIサーバと言っても、返してくるのはダミーのデータ、POST�
    └/todos
 ```
 
-データ取得は`GET`、追加は`POST`、更新は`PUT`、削除は`DELETE`で、いわゆる一般的な RESTのAPIとしてアクセスできます。
+データ取得は`GET`、追加は`POST`、更新は`PUT`、削除は`DELETE`で、いわゆる一般的なRESTのAPIとしてアクセスできます。
 部分的に更新したい場合は`PATCH`だそうです。初めて知った。
 親子関係にあるデータは`posts/1/commets`のように階層的に取得することもできます。  
 
@@ -45,7 +45,7 @@ APIサーバと言っても、返してくるのはダミーのデータ、POST�
 
 ### GET
 
-サンプルとして、JavaScriptのFetch API で postsのid=1取得してみます。
+サンプルとして、JavaScriptのFetch APIでpostsのid=1取得してみます。
 
 ```js
 fetch("https://jsonplaceholder.typicode.com/posts/1")
@@ -111,7 +111,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/", param)
 
 ## PUT
 
-あまりPOSTと変わりません。methdが`PUT`になり、URLが`post/1`に変わるぐらい。
+あまりPOSTと変わりません。methdが`PUT`になって、URLが`post/1`に変わるぐらい。
 
 ```js
 let param = {
@@ -185,7 +185,7 @@ https://my-json-server.typicode.com/
 
 {{% img src="images/jsonplaceholder/howto.png" w="800" h="187" %}}
 
-ちなみにFreeプランでは下記の制限があり、大量データなどは使えないようですが課金すれば少し上限は上がるようです。
+ちなみにFreeプランでは下記の制限があって、大量データなどは使えないようですが課金すれば少し上限は上がるようです。
 
 ```
 10KB db.json max

@@ -36,7 +36,7 @@ VirtualBox(Vagrant)でCentOS7を立ち上げてしばらくすると、ホスト
 もともと有効である必要がなかったし警告も出てたのそのまま無効にしておく。
 
 今度は[このサイト](http://omulettekobo.hatenablog.com/entry/2013/10/04/112836
-)を見て、割り当てCPU数は元々1つだったので、「(1)IO APICを有効化のチェックを外す」、「(3) ネステッドページングを有効化のチェックを外す」を試してみたけど、これも関係なかった。
+)を見て、割り当てCPU数はもともと1つだったので、「(1)IO APICを有効化のチェックを外す」、「(3) ネステッドページングを有効化のチェックを外す」を試してみたけど、これも関係なかった。
 
 {{% img src="images/vboxheadless-cpu-usage/ioapic.png" w="800" h="590" %}}
 {{% img src="images/vboxheadless-cpu-usage/nestedpaging.png" w="800" h="590" %}}
@@ -47,6 +47,6 @@ VirtualBox(Vagrant)でCentOS7を立ち上げてしばらくすると、ホスト
 UbuntuとCentOS6のゲストOSを試したところ、CentOS7でしか発生しない問題であることが分かった。  
 また、発生するタイミングもPCのスリープからの復帰直後に発生するという法則も分かってきた。  
 最初は全く意味が分からなかったので、これが分かっただけでも大きな進歩。  
-だがしかし、原因がさっぱり分からないので対症療法でしかないがスリープさせる前に vagrant suspend か vagrant haltでVMを明示的に止めておくことで回避している。  
+だがしかし、原因がさっぱり分からないので対症療法でしかないがスリープさせる前にvagrant suspendか vagrant haltでVMを明示的に止めておくことで回避している。  
 Macbook Airの旧モデルでCentOS7をVirtualBoxで動かした時はこんな問題起きなかったので、Macbook自体かMojaveに関連する問題なのかな。  
 ちゃんとした対応方法が分かったら追記します。

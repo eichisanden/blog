@@ -39,7 +39,7 @@ deploy:
 ```
 
 hugoのビルド結果がpublicフォルダに出力され、repoで指定したリポジトリにプッシュされます。  
-`$GITHUB_TOKEN`は、GithubでPersonal access tokenを発行し、Travis.ciの環境変数に値を登録しました。
+`$GITHUB_TOKEN`は、GithubでPersonal access tokenを発行して、Travis.ciの環境変数に値を登録しました。
 
 {{% img  src="images/deploy-hugo-on-githubpages1.png" w="800" h="524" %}}
 

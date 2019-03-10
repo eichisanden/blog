@@ -38,8 +38,8 @@ Body部です。こちらも-dオプションの値が設定されています�
 ## Environmentでサーバーごとの設定を変数にする
 
 例えば接続先のサーバーごとにRequest設定を作成すると管理が大変になるので、ホスト名やAPIトークンなどは変数にして無闇にRequest設定を増やさない方が良いでしょう。  
-New -> Environment で環境（変数を束ねる単位だと思っています）を作成できますので作っていきます。
-ここでは、試しにtestという環境を作り、変数としてservrerを追加しました。
+New -> Environmentで環境（変数を束ねる単位だと思っています）を作成できますので作っていきます。
+ここでは、試しにtestという環境を作って、変数としてservrerを追加しました。
 
 {{% img src="images/postman/environment.png" w="600" h="453" %}}
 
@@ -55,8 +55,8 @@ New -> Environment で環境（変数を束ねる単位だと思っています�
 
 ### 設定を丸ごと共有する
 
-Settings -> Export data からCollectionsやEnvironmentの設定を丸ごとエクスポートして、
-Settings -> Import data で他のPCで環境が再現できます。  
+Settings -> Export dataからCollectionsやEnvironmentの設定を丸ごとエクスポートして、
+Settings -> Import dataで他のPCで環境が再現できます。  
 丸ごとと言ってもCollection, Environment, Global、 Header presetsがExport対象なようです。  
 ExportしたJSONファイルをリポジトリ管理することで設定をシェア出来そうです。
 

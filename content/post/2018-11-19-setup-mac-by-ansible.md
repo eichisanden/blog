@@ -27,7 +27,7 @@ description = "新しいMacbook Airを買ったのでの環境構築をAnsible�
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-ちなみに、以前は Homebrew-cask を使うためには、`brew tap caskroom/cask` で参照するリポジトリを追加する必要がありましたが、今はHomebrewに統合されているので必要ありません。  
+ちなみに、以前はHomebrew-caskを使うためには、`brew tap caskroom/cask` で参照するリポジトリを追加する必要がありましたが、今はHomebrewに統合されているので必要ありません。  
 パッケージの検索も `brew cask search <package>`ではなく、`brew search <package>`でいけます。
 
 <参考>  
@@ -98,7 +98,7 @@ echo localhost > hosts
 
 [homebrewパッケージ](https://docs.ansible.com/ansible/2.7/modules/homebrew_module.html)
 でインストールしていきます。
-以前はハッシュのリストを`with_items`でループさせる手順が多く見られましたが今は非推奨みたいで配列で回しました。
+以前はハッシュのリストを`with_items`でループさせる手順が多く見られましたが今は非推奨みたいで配列を使用しました。
 
 ```yml
     - name: install homebrew packages
@@ -136,7 +136,7 @@ echo localhost > hosts
 
 oh-my-zshはshellでインストールするので、冪等性は自分で確保しないといけません。
 statで`~/.oh-my-zsh/`を存在チェックした結果を変数に格納して、存在しない場合だけインストールします。
-デフォルトシェルの変更は Ansibleに標準で入っている `user` Moduleで行いました。
+デフォルトシェルの変更はAnsibleに標準で入っている `user` Moduleで行いました。
 また、個人で使うならログインユーザのnameはベタ書きでも良いのですが、公開することを考えて `ansible_ssh_user`変数から取得するようにしています。
 
 ```yml
@@ -205,7 +205,7 @@ playbook.ymlに戻って、先ほど取得したRoleで必要な`mas_installed_a
     - geerlingguy.mas
 ```
 
-ちなみに OSX 10.13以上はコマンドでApp Storeにログインできなくなってますが、App Storeアプリを一度立ち上げてログインしておけばそれだけで認証してくれるようです。
+ちなみにOSX 10.13以上はコマンドでApp Storeにログインできなくなってますが、App Storeアプリを一度立ち上げてログインしておけばそれだけで認証してくれるようです。
 
 ```
 $ mas signin <Apple ID>
@@ -215,7 +215,7 @@ For more info see: https://github.com/mas-cli/mas/issues/164
 
 ### dotfiles
 
-自分のdotileは元々Githubに置いていたのですが、これまたAnsible-garaxyから拝借したRoleを使って設定していきます。
+自分のdotileはもともとGithubに置いていたのですが、これまたAnsible-garaxyから拝借したRoleを使って設定していきます。
 リポジトリのパスとクローンするフォルダ、対象のファイルを変数に指定します。
 
 ```yml

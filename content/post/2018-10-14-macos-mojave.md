@@ -3,17 +3,17 @@ thumbnail = "images/macos-mojave/title.png"
 tags = ["Mac"]
 categories = ["技術メモ"]
 date = "2018-10-14T09:45:35+09:00"
-title = "ちょっと古めのMacBook Air に macOS Mojaveをインストールしてみた"
-description = "MacBook Air 2013 に macOS Mojaveをインストールした記録と、新機能についての所感"
+title = "ちょっと古めのMacBook AirにmacOS Mojaveをインストールしてみた"
+description = "MacBook Air 2013にmacOS Mojaveをインストールした記録と、新機能についての所感"
 +++
 
-詳しく調べてないけど、そんな悪い評判も聞かないので High Sierraから、パワーに満ちたシンプル macOS Mojaveへアップデートしてみました。
+詳しく調べてないけど、そんな悪い評判も聞かないのでHigh Sierraから、パワーに満ちたシンプルmacOS Mojaveへアップデートしてみました。
 
 ## 動作環境
 
 MacBook Air(mid 2013)
 
-[互換性のあるMac](https://support.apple.com/ja-jp/HT201475)によるとMacBook Air、MacBook Proは 「2012年中期以降に発売されたモデルが対象」と結構厳しいです。  
+[互換性のあるMac](https://support.apple.com/ja-jp/HT201475)によるとMacBook Air、MacBook Proは「2012年中期以降に発売されたモデルが対象」と結構厳しいです。  
 今回はなんとかセーフでしたが、うちのMacBook Airの現役引退の日はそう遠くなさそうです。
 
 ## インストール
@@ -33,7 +33,7 @@ MacBook Air(mid 2013)
   Previously, if you had enabled this hidden OS
   feature, text would be very hard to read.
 
-元々、iTerm2 は3.2.2が入っていましたが、  
+もともと、iTerm2は3.2.2が入っていましたが、  
 3.2.3のリリースノートに上記の記述があり単純にバージョンアップしただけで綺麗になりました。
 
 {{% img src="images/macos-mojave/iterm2-after.png" w="653" h="443" %}}
@@ -49,7 +49,7 @@ iTerm2は綺麗になりましたが、根本的にOSレベルで
 $ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 ```
 
-またアンチエイリアシングの強度を変えられるようで、「AppleFontSmoothing」を「3」と最強に変更しました。これもターミナルで実行し、ログアウトしログインすると反映されます。
+またアンチエイリアシングの強度を変えられるようで、「AppleFontSmoothing」を「3」と最強に変更しました。これもターミナルで実行してログアウトしログインすると反映されます。
 
 ```
 $ defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
@@ -69,7 +69,7 @@ https://gori.me/mac/mac-tips/110780
 
 ## vimの起動でエラー
 
-(2018/10/16 追記) vimの起動時にpowerlineでエラーが出ることに気づいたので対応しました。
+(2018/10/16追記) vimの起動時にpowerlineでエラーが出ることに気づいたので対応しました。
 
 ```
 $ vi
@@ -133,7 +133,7 @@ VirtualBox 5.1.10はMojaveに対応していないようです。
 
 {{% img src="images/macos-mojave/virtualbox2.png" w="532" h="269" %}}
 
-[こちらの記事](https://qiita.com/kai_kou/items/4f554a515ea7926702df)を見ると、VirtualBoxをバージョンアップすれば良いようなので 5.2に上げましたが、こんどはVagrant 1.9.4がVirtualBox5.1までしか対応してませんでした。
+[こちらの記事](https://qiita.com/kai_kou/items/4f554a515ea7926702df)を見ると、VirtualBoxをバージョンアップすれば良いようなので5.2に上げましたが、こんどはVagrant 1.9.4がVirtualBox5.1までしか対応してませんでした。
 
 ```
 $ vagrant up

@@ -51,7 +51,7 @@ Client Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.3", GitCom
 Server Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.3", GitCommit:"2bba0127d85d5a46ab4b778548be28623b32d0b0", GitTreeState:"clean", BuildDate:"2018-05-21T09:05:37Z", GoVersion:"go1.9.3", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-シンボリックリンクを貼り直せば済むと思うが、`Enable Kubernetes`を OFF -> ON でKubernetsを入れ直したところ事なきを得ました。
+シンボリックリンクを貼り直せば済むと思われるが、`Enable Kubernetes`をOFF -> ONでKubernetsを入れ直したところ事なきを得ました。
 
 ```
 $ ll $(which kubectl)
@@ -82,7 +82,7 @@ KubeDNS is running at https://localhost:6443/api/v1/namespaces/kube-system/servi
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
-前回作ったサンプルアプリを起動し、exposeします。
+前回作ったサンプルアプリを起動してexposeします。
 
 ```
 $ kubectl run hello-node --image=hello-node:v1 --port=8080 --image-pull-policy=Never
@@ -101,7 +101,7 @@ Minikubeのときは `minikube service hello-node` でブラウザを開きま�
 - Minikubeとの使い分けが分かってないが、MacかWindowsで開発することが多いので気軽に使えて良さそう
   - 使いたいaddonが出てきたらMinkube使いたくなるのかな...
 - 使っているDockerに対応したバージョンのk8sがダウンロードされるので、バージョン違いによる変なハマり方をしなくて済みそう
-- docker stack でKubernetesと連携できるみたいなので今度試してみよう
+- docker stackでKubernetesと連携できるみたいなので今度試してみよう
 
 ＜参考＞  
 https://docs.docker.com/docker-for-mac/#kubernetes  

@@ -17,7 +17,7 @@ thumbnail = "images/start-blog-with-hugo/hugo.png"
 - StaticGen https://www.staticgen.com/
 - Static Site Generators https://staticsitegenerators.net/
 
-上記サイトで調べてみると、世の中にはものすごい沢山の静的サイトジェネレータがあると分かります。  
+上記サイトで調べてみると、世の中にはたくさんの静的サイトジェネレータがあると分かります。  
 自分が知っているのは、Jekyll、Middleman、Hubpress、Sphinxぐらいでした。  
 最初はGitHubのスターの数が他を圧倒しているしGitHubが公式に対応しているJekyllにしようと思いましたが、ページ生成が遅いとのことなので速いと評判のHugoを採用しました。
 
@@ -30,7 +30,7 @@ HugoはGoで書かれているため公開されたバイナリを実行する�
 
 使いたいテーマがないと困るので、先にテーマを探しておきます。  
 テーマの数はそれほど多くない印象です。  
-探したところ、はてブにも対応したRobustというクールなテーマがあったので使用させて頂きました。
+探したところ、はてブにも対応したRobustというクールなテーマがあったので使用させていただきました。  
 
 Robust http://themes.gohugo.io/robust/
 
@@ -69,7 +69,7 @@ $ hugo new site eichisanden.github.io
 
 ## テーマの設定
 
-先ほど調べておいたテーマをGitHubから取得します。  
+先ほど調べておいたテーマをGitHubから取得します。
 
 ```
 $ cd themes
@@ -111,18 +111,18 @@ title = "first_content"
 
 `+++`で囲まれている部分は `front matter`と呼ばれる設定部分ですので、本文は直後に書いていきます。  
 Robustテーマは、`thumbnail = "images/hugo.png"` でサムネイル画像が指定出来ます。  
-また、`toc = true` を追加すると目次が表示されます。  
+また、`toc = true` を追加すると目次が表示されます。
 
 ## サーバー起動してプレビュー
 
-内容が書けたらローカルでプレビューしていきます。  
+内容が書けたらローカルでプレビューしていきます。
 
 ```
 $ hugo server --theme=hugo_theme_robust --buildDrafts
 ```
 
 テーマとドラフトの記事も生成するオプションを指定してHugo Serverを起動すれば http://localhost:1313/ にアクセスしてプレビューが確認できます。  
-また、ファイルを編集すると自動的にブラウザがリロードされプレビューに即反映されるのが便利です。  
+また、ファイルを編集すると自動的にブラウザがリロードされプレビューに即反映されるのが便利です。
 
 ## ドラフトを解除して公開用にpublicフォルダを生成
 
@@ -138,7 +138,7 @@ $ hugo --theme=hugo_theme_robust
 ## Github Pagesで公開
 
 あとはGithubにpushして公開します。  
-publicフォルダの中身をGithubにpushして公開します。  
+publicフォルダの中身をGithubにpushして公開します。
 
 ```
 $ cd public
