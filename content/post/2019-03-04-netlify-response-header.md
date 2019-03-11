@@ -11,7 +11,7 @@ description = "Netlifyで任意のレスポンスヘッダーを返却する"
 
 [Netlifyにブログを引っ越した](https://gyoza.beer/post/2017-06-17-netlify/)時点では独自のレスポンスヘッダーが設定できなかったですが、久々に見てみたらできるようになっていたので設定してみました。
 
-昔のビルド結果はこんな感じでした。
+ちなみに昔のビルド結果はこんな感じでした。
 
 {{% img src="images/netlify-response-header/build-log-old.png" w="800" h="294" %}}
 
