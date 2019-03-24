@@ -1,10 +1,10 @@
-baseURL = "https://gyoza.beer/"
+baseURL = "https://blog.a-1.dev/"
 languageCode = "ja"
 title = "A1 Blog"
 theme = "hugo_theme_robust"
 preserveTaxonomyNames = true
 paginate = 10
-googleAnalytics = "UA-99604336-1"
+googleAnalytics = "UA-136833263-1"
 disqusShortname="a1-blog"
 hasCJKLanguage = true
 # Build robots.txt file

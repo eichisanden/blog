@@ -16,7 +16,13 @@ X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 
 [[redirects]]
-from = "https://curator-badger-35454.netlify.com/*"
-to = "https://gyoza.beer/:splat"
+from = "https://gyoza.beer/*"
+to = "https://blog.a-1.dev/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://angry-euclid-67959a.netlify.com/*"
+to = "https://blog.a-1.dev/:splat"
 status = 301
 force = true
