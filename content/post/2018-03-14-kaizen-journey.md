@@ -13,7 +13,7 @@ title = "「KAIZEN JOURNEY」を読んだ"
   title="カイゼン・ジャーニー たった1人からはじめて、「越境」するチームをつくるまで"
   author="市谷聡啓 (著),‎ 新井剛 (著)"
   publisher="翔泳社"
-  imageUrl="https://images-na.ssl-images-amazon.com/images/I/51q9RDcOKuL._SX350_BO1,204,203,200_.jpg"
+  imageUrl="https://images-fe.ssl-images-amazon.com/images/I/413zYBVOo2L._SL160_.jpg"
 %}}
 
 ## 技術書に泣かされるとは思わなかった
