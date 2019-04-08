@@ -1,0 +1,31 @@
+---
+label: normal
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  config:
+    required: true
+- type: file
+  label: thumbnail
+  name: thumbnail
+- type: datetime
+  name: date
+  label: date
+  config:
+    required: true
+    date_format: YYYY-MM-DDTHH:MM:SS+09:00
+- type: tag_list
+  name: tags
+  label: tags
+- type: select
+  config:
+    source:
+      type: documents
+    required: true
+  label: categories
+  name: categories
+- type: textarea
+  name: description
+  label: description
