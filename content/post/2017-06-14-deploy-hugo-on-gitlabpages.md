@@ -8,19 +8,19 @@ title = "GitHub PagesからGitLab Pagesに移行してみた"
 toc = true
 +++
 
-# GitHub PagesからGitLab Pagesに移行してみた
+## GitHub PagesからGitLab Pagesに移行してみた
 
 なぜだかCloud Flareで発行した証明書から自分のドメインが消えてしまうという謎の事象を解決できなかったのもあって、自前のSSL/TLS証明書を設定できるGitLab Pagesにブログを移行した。  
 基本的な設定は置いておいて、独自ドメインの設定とSSL/TLS証明書の設定方法のメモ。
 
-## DNSの設定
+### DNSの設定
 
 お名前.comの管理画面でDNSのAレコードをGit LabページのIPアドレス（52.167.214.135）に向けておく。
 
 {{% img src="images/gitlab_pages1.png" w="671" h="327" %}}
 
 
-## Let's EncryptでSSL/TLS証明書を設定する
+### Let's EncryptでSSL/TLS証明書を設定する
 
 Let's Encryptをダウンロードして証明書を発行していきます。
 
@@ -50,7 +50,7 @@ http://gyoza.beer/.well-known/acme-challenge/MVcYbRe68R9_hMc8hGGl1bGh3dOXP0qjYf9
 
 MVcYbRe68R9_hMc8hGGl1bGh3dOXP0qjYf9vO8D8M40.6w_jWE2mP9CxdvJca7dEsHUCF_JEu2f5uP3ZLVuW3hg
 ```
-# GitLabにSSL/TLS証明書を設定
+## GitLabにSSL/TLS証明書を設定
 
 発行された証明書をGitLab PagesのSettings->Pagesから設定します。
 
@@ -61,7 +61,7 @@ $ sudo cat /etc/letsencrypt/live/gyoza.beer/privkey.pem | pbcopy
 
 それぞれCertificate(PEM), Key(PEM)に貼り付けます。
 
-# .gitlab-ci.ymlの設定
+## .gitlab-ci.ymlの設定
 
 [Gitlab PagesのHugoのサンプルプロジェクト](https://gitlab.com/pages/hugo)の.gitlab-ci.ymlを参考に作成します。  
 先ほど証明書生成時にのログに出てきたacme-challengeのファイルを作成して、public下の所定のフォルダへコピーするようにしてみました。
