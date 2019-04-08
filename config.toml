@@ -10,6 +10,7 @@ hasCJKLanguage = true
 # Build robots.txt file
 enableRobotsTXT = true
 enableEmoji = true
+hrefTargetBlank = true
 
 [params]
   description = ""
