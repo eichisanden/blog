@@ -1,5 +1,4 @@
 +++
-draft = true
 thumbnail = "images/docker-mount-error/title.png"
 tags = ["Docker"]
 categories = ["作業ログ"]
