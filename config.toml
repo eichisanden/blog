@@ -19,6 +19,7 @@ hrefTargetBlank = true
     googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
   fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
   #logofontfamily = "Lobster, cursive" # Optional, Override logo font.
+  OgpApiEndpoint = "https://blog.a-1.dev/.netlify/functions/ogp?url="
 
 [params.author]
   thumbnail = "images/a1.png"
