@@ -15,11 +15,16 @@ exports.handler = (event, context, callback) => {
     } 
     let ogpData = {};
     ogpData['siteName'] = data.title;
-    for(let prop in data.ogp) {
+    for (let prop in data.ogp) {
         if (/^og:/g.test(prop)) {
             ogpData[prop.split(':')[1]] = data.ogp[prop][0];
         }
     }
+    for (let prop in data.seo) {
+      if (/^og:/g.test(prop)) {
+          ogpData[prop.split(':')[1]] = data.seo[prop][0];
+      }
+  }
     console.log(JSON.stringify(ogpData));
     callback(null, {
       statusCode: 200,
