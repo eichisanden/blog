@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify --enableGitInfo"
+command = "npm run build && hugo --gc --minify --enableGitInfo"
 functions="./functions"
 
 [context.production.environment]

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "textlint content/post/*.md"
+    "lint": "textlint content/post/*.md",
+    "build": "netlify-lambda build src/functions/",
+    "serve": "netlify-lambda serve src/functions/"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/eichisanden/blog#readme",
   "devDependencies": {
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "1.0.1",
+    "netlify-lambda": "1.4.5",
     "textlint": "11.2.3",
     "textlint-filter-rule-whitelist": "2.0.0",
     "textlint-rule-ja-hiragana-fukushi": "1.0.3",

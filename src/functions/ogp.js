@@ -5,8 +5,8 @@ exports.handler = (event, context, callback) => {
     return;
   }
 
-  const parser = require("ogp-parser");
   const url = event.queryStringParameters.url;
+  const parser = require("ogp-parser");
   parser(encodeURI(url), true).then(function(data) {
     console.log(data);
     if (!data.hasOwnProperty('title')) {
