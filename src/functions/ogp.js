@@ -24,7 +24,7 @@ exports.handler = (event, context, callback) => {
       if (/^og:/g.test(prop)) {
           ogpData[prop.split(':')[1]] = data.seo[prop][0];
       }
-  }
+    }
     console.log(JSON.stringify(ogpData));
     callback(null, {
       statusCode: 200,
