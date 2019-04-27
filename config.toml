@@ -11,6 +11,7 @@ hasCJKLanguage = true
 enableRobotsTXT = true
 enableEmoji = true
 hrefTargetBlank = true
+timeout = 30000
 
 [params]
   description = ""
