@@ -1,7 +1,7 @@
 +++
 thumbnail = "images/gradle-shadow/title.png"
 tags = ["Gradle Shadow", "Java", "gradle"]
-categories = [”技術メモ”]
+categories = ["技術メモ"]
 date = "2019-05-17T13:23:38+09:00"
 title = "Gradle Shadowで全部入りのmainクラスを実行できるjarファイルを作成する"
 description = "Gradle Shadowで全部入りのmainクラスを実行できるjarファイルを作成する"
