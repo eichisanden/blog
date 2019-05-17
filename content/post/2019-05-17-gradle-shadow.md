@@ -3,14 +3,15 @@ thumbnail = "images/gradle-shadow/title.png"
 tags = ["Gradle Shadow", "Java", "gradle"]
 categories = ["技術メモ"]
 date = "2019-05-17T13:23:38+09:00"
-title = "Gradle Shadowで全部入りのmainクラスを実行できるjarファイルを作成する"
-description = "Gradle Shadowで全部入りのmainクラスを実行できるjarファイルを作成する"
+title = "Gradle Shadowでmainクラスを実行できる全部入りのjarファイルを作成する"
+description = "Gradle Shadowでmainクラスを実行できる全部入りのjarファイルを作成する"
 +++
 
-依存するjarファイルの配置などが面倒なのでJavaでは作らず、ちょっとしたツールはGoで作ることが多いのですが、Gradle Shadowを使ってjarファイルを1つに固めたら楽でした。ちなみに全部入りのjarファイルのことをFat Jarと呼ぶそうです。
+依存するjarファイルの配置などが面倒なのでJavaでは作らず、ちょっとしたツールはGoで作ることが多いのですが、Gradle Shadowを使ってjarファイルを1つに固めたら楽でした。
 
-{{% ogp "https://imperceptiblethoughts.com/shadow/" %}}
+https://imperceptiblethoughts.com/shadow/
 
+ちなみに全部入りのjarファイルのことをFat Jarと呼ぶそうです。  
 User Jarとも言うみたいですが、タクシーのUberとは関係ないようです。へー。
 
 https://www.sakatakoichi.com/entry/2015/11/16/143303
@@ -66,5 +67,4 @@ $ java -jar hoge-1.0.jar
 
 ## おわりに
 
-簡単でした。
-自分の備忘のため記事にしました。
+簡単でしたが自分の備忘のため記事にしました。
