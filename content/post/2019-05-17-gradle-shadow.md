@@ -7,7 +7,7 @@ title = "Gradle Shadowでmainクラスを実行できる全部入りのjarファ
 description = "Gradle Shadowでmainクラスを実行できる全部入りのjarファイルを作成する"
 +++
 
-依存するjarファイルの配置などが面倒なのでJavaでは作らず、ちょっとしたツールはGoで作ることが多いのですが、Gradle Shadowを使ってjarファイルを1つに固めたら楽でした。
+依存するjarファイルの配置などが面倒なので、ちょっとしたツールはGoで作ることが多いのですが、Gradle Shadowを使ってjarファイルを1つに固めたら楽でした。
 
 https://imperceptiblethoughts.com/shadow/
 
@@ -49,9 +49,15 @@ dependencies {
 }
 ```
 
+現時点ではIntelliJ IDEAでgraldeプロジェクトを作ると4.10.3が使わるのですが、Gradle4系では使えないようなので`gradle/wrapper/gradle-wrapper.properties`を書き換えました。
+
+```
+distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-bin.zip
+```
+
 ## ビルド
 
-gradleで`shadowJar`タスクを実行するとbuild/libsにJarファイルが作成されています。
+gradleで`shadowJar`タスクを実行すると`build/libs`にJarファイルが作成されています。
 
 ```
 $ gradlew shadowJar
@@ -59,7 +65,7 @@ $ gradlew shadowJar
 
 ## 実行
 
-作成したjarファイルを引数に指定してjaraコマンドを実行するだけです。
+作成したjarファイルを引数に指定してjavaコマンドを実行するだけです。
 
 ```
 $ java -jar hoge-1.0.jar
@@ -67,4 +73,4 @@ $ java -jar hoge-1.0.jar
 
 ## おわりに
 
-簡単でしたが自分の備忘のため記事にしました。
+以上、簡単でしたが自分の備忘のため記事にしました。
