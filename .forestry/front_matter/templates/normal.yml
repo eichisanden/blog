@@ -22,10 +22,15 @@ fields:
 - type: select
   config:
     source:
-      type: documents
+      type: simple
+      section: ''
+      path: ''
     required: true
+    options:
+    - 技術メモ
   label: categories
   name: categories
+  default: ''
 - type: textarea
   name: description
   label: description
