@@ -2,7 +2,6 @@
 categories = "技術メモ"
 date = "2019-05-26T00:00:00+09:00"
 description = "FORESTRYで静的サイトをWeb上で編集する"
-draft = true
 tags = ["Forestry", "Hugo"]
 thumbnail = "static/images/forestry/title.png"
 title = "FORESTRYで静的サイトをWeb上で編集する"
@@ -11,6 +10,8 @@ title = "FORESTRYで静的サイトをWeb上で編集する"
  FORESTRYという静的サイトをWeb上のWYSIWYGなエディタで編集でできるサービスを試しに使ってみました。
 
 まずアカウント作成します。GitHub、GitLab、Bigbucketのアカウントでもログインできるので便利です。私はBlogの記事を管理しているもありGitHubアカウントでログインしました。
+
+## 使い方
 
 ![](static/images/forestry/create-account.png)
 
@@ -38,4 +39,10 @@ title = "FORESTRYで静的サイトをWeb上で編集する"
 
 ![](static/images/forestry/editing.png)
 
+一応プレビューもできるのですが、プレビューが表示される時間が大分かかるのと、私のサイトはちゃんと表示できないので使っていません。
+
 後は記事を書いて公開するだけです。
+
+## おわりに
+
+私のサイトの場合は、FORESTRYだけで編集するのは難しくて最後にShortCodeを使うように書き換えたり仕上げが必要ですが、文章を書くことに集中できるのでとりあえず書き殴りたいには良さそうです。
