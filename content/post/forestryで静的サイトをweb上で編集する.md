@@ -7,11 +7,11 @@ thumbnail = "static/images/forestry/title.png"
 title = "FORESTRYで静的サイトをWeb上で編集する"
 
 +++
- FORESTRYという静的サイトをWeb上のWYSIWYGなエディタで編集でできるサービスを試しに使ってみました。
-
-まずアカウント作成します。GitHub、GitLab、Bigbucketのアカウントでもログインできるので便利です。私はBlogの記事を管理しているもありGitHubアカウントでログインしました。
+FORESTRYという静的サイトをWeb上のWYSIWYGなエディタで編集でできるサービスを試しに使ってみました。
 
 ## 使い方
+
+まずアカウント作成します。GitHub、GitLab、Bigbucketのアカウントでもログインできるので便利です。私はBlogの記事を管理しているもありGitHubアカウントでログインしました。
 
 ![](static/images/forestry/create-account.png)
 
