@@ -3,8 +3,8 @@ thumbnail = "images/migrate-domain/title.png"
 tags = ["Google Domains", "Netlify"]
 categories = ["作業ログ"]
 date = "2019-04-05T00:00:00+09:00"
-title = "Hugo+Netlifyでホストしているブログをdevドメインに移行しました"
-description = "Hugo+Netlifyでホストしているブログをdevドメインに移行した話"
+title = "NetlifyでホストしているHugoブログをdevドメインに移行しました"
+description = "NetlifyでホストしているHugoブログをdevドメインに移行した話"
 toc = true
 +++
 
