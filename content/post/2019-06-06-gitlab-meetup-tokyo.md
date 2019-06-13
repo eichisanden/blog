@@ -40,6 +40,8 @@ GitLab-TokyoのTwitterアカウント(@GitLabTokyo)を作ったのでフォロ�
 ## GitLab Contributeの2019に参加した話
 by @hiroponzさん
 
+https://docs.google.com/presentation/d/1zZkvmuxtM2hDlbbFO4YNvK43KeF2LIVjeaKfK9NZKYo/preview?slide=id.p
+
 - GitLab Contributeとは？
   - 9ヶ月に１度、世界中からGitLabの社員とCore Teamのメンバーが集合する。  
   - 去年まではGitLab Summitsという名前だった。
@@ -111,6 +113,8 @@ https://docs.mattermost.com/deployment/sso-ldap.html
 ## GItLab CIで簡単コンテナ開発
 by @tempacct032419さん
 
+https://gitlab.com/mrman/talks/raw/master/dist/2019/06/gitlab-tokyo-meetup/gitlab-ci-and-docker-containers.pdf
+
 - コンテナとは何か？
 - パイプラインでコンテナビルド
 - GitLabはDockerレジストリーが無料で使えたり、イメージのスキャンができる。
@@ -130,6 +134,8 @@ by @chengさん
 
 ## スポンサーLT
 
+{{% speakersdeck id="ff66112f0fe34cd88c550835e4c439da" ratio="1.77777777777778" %}}
+
 GitLab CEにガントチャートが欲しい。
 GanttLabというガントチャートがあるが、まだ触ってない。
 
@@ -148,4 +154,5 @@ GitLab IssueをAPIで読み込んでガントチャートを書いてみた。
 ## おわりに
 
 今回も面白い話をたくさん聴けましたし、ブログにまとめることで良い復習となりました。
-資料が公開されたら追記するつもりです。
+資料が公開されたら追記するつもりです。  
+**2019/06/13** すベての資料が公開されたので記事にリンクを追加しました。
