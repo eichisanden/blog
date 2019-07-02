@@ -1,5 +1,5 @@
 +++
-thumbnail = "images/docker-mount-error/title.png"
+thumbnail = "images/eye-catch/docker.png"
 tags = ["Docker"]
 categories = ["作業ログ"]
 date = "2019-04-13T16:00:00+09:00"
