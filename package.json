@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/eichisanden/blog#readme",
   "devDependencies": {
-    "@textlint-ja/textlint-rule-no-insert-dropping-sa": "1.0.1",
+    "@textlint-ja/textlint-rule-no-insert-dropping-sa": "1.0.2",
     "netlify-lambda": "2.0.1",
     "textlint": "11.7.6",
     "textlint-filter-rule-whitelist": "2.0.0",
