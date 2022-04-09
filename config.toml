@@ -4,7 +4,7 @@ title = "A1 Blog"
 theme = "hugo_theme_robust"
 preserveTaxonomyNames = true
 paginate = 10
-googleAnalytics = "UA-136833263-1"
+googleAnalytics = "G-HTQY1SBLEF"
 disqusShortname="a1-blog"
 hasCJKLanguage = true
 # Build robots.txt file
