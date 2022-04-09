@@ -31,9 +31,6 @@ timeout = 30000
   twitter = "https://twitter.com/eichisanden"
   github = "https://github.com/eichisanden"
 
-  # My custom settings
-  amazonId = "eichisanden-22"
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
