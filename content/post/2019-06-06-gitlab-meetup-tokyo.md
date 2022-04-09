@@ -86,7 +86,7 @@ https://about.gitlab.com/handbook/people-operations/global-compensation/calculat
 
 適当に検索条件を入れてみたらこんな感じでした。
 
-{{< tweet 1136588547345924096 >}}
+{{< tweet user="eichisanden" id="1136588547345924096" >}}
 
 次回はおそらく 2020/02。アジアのどこか？
 
